@@ -8,18 +8,16 @@ import com.ontimize.jee.server.rest.ORestController;
 import com.ontimize.tuppereats.api.core.service.IMenuService;
 
 
-public class MenuRestCrontroller {
-	@RestController
-	@RequestMapping("/menus")
-	public class ProductRestController extends ORestController<IMenuService> {
+@RestController
+@RequestMapping("/menus")
+public class MenuRestCrontroller extends ORestController<IMenuService> {
 
 		@Autowired
-		private IMenuService productService;
+		private IMenuService menuService;
 
 		@Override
 		public IMenuService getService() {
-			return this.productService;
+			return this.menuService;
 
 		}
 	}
-}

@@ -6,9 +6,9 @@ import org.springframework.stereotype.Repository;
 import com.ontimize.jee.server.dao.common.ConfigurationFile;
 import com.ontimize.jee.server.dao.jdbc.OntimizeJdbcDaoSupport;
 
-@Repository
+@Repository("MenuDao")
 @Lazy
-@ConfigurationFile(configurationFile = "dao/MenuDao.xml", configurationFilePlaceholder = "dao/placeholders.propertis")
+@ConfigurationFile(configurationFile = "dao/MenuDao.xml", configurationFilePlaceholder = "dao/placeholders.properties")
 public class MenuDao extends OntimizeJdbcDaoSupport {
 
 	public static final String MENU_ID = "menu_id";
