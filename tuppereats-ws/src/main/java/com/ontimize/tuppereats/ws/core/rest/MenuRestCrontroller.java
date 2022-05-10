@@ -1,0 +1,25 @@
+package com.ontimize.tuppereats.ws.core.rest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ontimize.jee.server.rest.ORestController;
+import com.ontimize.tuppereats.api.core.service.IMenuService;
+
+
+public class MenuRestCrontroller {
+	@RestController
+	@RequestMapping("/menus")
+	public class ProductRestController extends ORestController<IMenuService> {
+
+		@Autowired
+		private IMenuService productService;
+
+		@Override
+		public IMenuService getService() {
+			return this.productService;
+
+		}
+	}
+}
