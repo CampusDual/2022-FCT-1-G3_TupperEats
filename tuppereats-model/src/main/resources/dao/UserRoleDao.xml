@@ -6,10 +6,10 @@
 	catalog="" schema="${mainschema}" table="tuser_role"
 	datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
 	<DeleteKeys>
-		<Column>usro_id</Column>
+		<Column>id_user_role</Column>
 	</DeleteKeys>
 	<UpdateKeys>
-		<Column>usro_id</Column>
+		<Column>id_user_role</Column>
 	</UpdateKeys>
 	<Queries>
 		<Query id="login">

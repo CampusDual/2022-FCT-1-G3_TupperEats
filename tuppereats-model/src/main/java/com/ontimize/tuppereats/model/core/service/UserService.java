@@ -1,20 +1,21 @@
 package com.ontimize.tuppereats.model.core.service;
 
 
-import java.sql.Timestamp;
-import java.util.Calendar;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.ontimize.jee.common.dto.EntityResult;
+import com.ontimize.jee.common.dto.EntityResultMapImpl;
+import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import com.ontimize.tuppereats.api.core.service.IUserService;
 import com.ontimize.tuppereats.model.core.dao.UserDao;
-import com.ontimize.jee.common.dto.EntityResult;
-import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
+import com.ontimize.tuppereats.model.core.dao.UserRoleDao;
 
 
 @Lazy
@@ -23,6 +24,9 @@ public class UserService implements IUserService {
 
 	@Autowired
 	private UserDao userDao;
+
+	@Autowired
+	private UserRoleDao userRoleDao;
 
 	@Autowired
 	private DefaultOntimizeDaoHelper daoHelper;
@@ -44,10 +48,36 @@ public class UserService implements IUserService {
 		return this.daoHelper.update(userDao, attrMap, keyMap);
 	}
 
+	@Transactional(rollbackFor = Exception.class)
 	public EntityResult userDelete(Map<?, ?> keyMap) {
-		Map<Object, Object> attrMap = new HashMap<>();
-		attrMap.put("user_down_date", new Timestamp(Calendar.getInstance().getTimeInMillis()));
-		return this.daoHelper.update(this.userDao, attrMap, keyMap);
+
+		boolean canDelete = true;
+		List<String> attrList = new ArrayList<String>();
+		attrList.add(UserRoleDao.ATTR_ID_USER_ROLE);
+		EntityResult query = this.daoHelper.query(this.userRoleDao, keyMap, attrList);
+
+		if (query.getCode() != EntityResult.OPERATION_WRONG) {
+
+			for (int i = 0; i < query.calculateRecordNumber(); i++) {
+				Map recordValues = query.getRecordValues(i);
+				EntityResult delete = this.daoHelper.delete(userRoleDao, recordValues);
+
+				if (delete.getCode() == EntityResult.OPERATION_WRONG) {
+					canDelete = false;
+					break;
+				}
+			}
+		}
+
+		if (canDelete) {
+			return this.daoHelper.delete(this.userDao, keyMap);
+		}
+
+		EntityResult toret = new EntityResultMapImpl();
+		toret.setCode(EntityResult.OPERATION_WRONG);
+		toret.setMessage("No se puede eliminar el usuario ya que existe un problema con su rol de usuario");
+		return toret;
+
 	}
 
 }
