@@ -7,11 +7,13 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ontimize.jee.common.dto.EntityResult;
 import com.ontimize.jee.common.dto.EntityResultMapImpl;
+import com.ontimize.jee.common.security.PermissionsProviderSecured;
 import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import com.ontimize.tuppereats.api.core.service.IUserService;
 import com.ontimize.tuppereats.model.core.dao.UserDao;
@@ -34,20 +36,23 @@ public class UserService implements IUserService {
 	public void loginQuery(Map<?, ?> key, List<?> attr) {
 	}
 
-	//Sample to permission
-	//@Secured({ PermissionsProviderSecured.SECURED })
+
+	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult userQuery(Map<?, ?> keyMap, List<?> attrList) {
 		return this.daoHelper.query(userDao, keyMap, attrList);
 	}
 
+	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult userInsert(Map<?, ?> attrMap) {
 		return this.daoHelper.insert(userDao, attrMap);
 	}
 
+	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult userUpdate(Map<?, ?> attrMap, Map<?, ?> keyMap) {
 		return this.daoHelper.update(userDao, attrMap, keyMap);
 	}
 
+	@Secured({ PermissionsProviderSecured.SECURED })
 	@Transactional(rollbackFor = Exception.class)
 	public EntityResult userDelete(Map<?, ?> keyMap) {
 

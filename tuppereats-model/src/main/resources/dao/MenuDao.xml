@@ -18,30 +18,30 @@
 			<AmbiguousColumns>
 				<AmbiguousColumn name="menuname" prefix="mn"
 					databaseName="name" />
-				<AmbiguousColumn name="primerplato" prefix="pp"
+				<AmbiguousColumn name="firstplate" prefix="pp"
 					databaseName="name" />
-				<AmbiguousColumn name="segundoplato" prefix="ps"
+				<AmbiguousColumn name="secondplate" prefix="ps"
 					databaseName="name" />
-				<AmbiguousColumn name="postre" prefix="po"
+				<AmbiguousColumn name="dessert" prefix="po"
 					databaseName="name" />
 			</AmbiguousColumns>
 			<Sentence>
-   <![CDATA[
-     SELECT
-      #COLUMNS#
-     FROM
-      menu mn
-      join product pp on mn.first_plate=pp.product_id
-
-
-      join product ps on mn.second_plate=ps.product_id
-
-
-      join product po on mn.dessert=po.product_id
-
-	#WHERE#
-
-   ]]>
+			   <![CDATA[
+			     SELECT
+			      #COLUMNS#
+			     FROM
+			      menu mn
+			      join product pp on mn.first_plate=pp.product_id
+			
+			
+			      join product ps on mn.second_plate=ps.product_id
+			
+			
+			      join product po on mn.dessert=po.product_id
+			
+				#WHERE#
+			
+			   ]]>
 		</Sentence>
 		</Query>
 	</Queries>
