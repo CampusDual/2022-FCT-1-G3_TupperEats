@@ -12,26 +12,38 @@
 		<Column>menu_id</Column>
 	</UpdateKeys>
 	<GeneratedKey>menu_id</GeneratedKey>
-	
+
 	<Queries>
-  <Query id="default">
-   
-   <Sentence>
+		<Query id="default">
+			<AmbiguousColumns>
+				<AmbiguousColumn name="menuname" prefix="mn"
+					databaseName="name" />
+				<AmbiguousColumn name="primerplato" prefix="pp"
+					databaseName="name" />
+				<AmbiguousColumn name="segundoplato" prefix="ps"
+					databaseName="name" />
+				<AmbiguousColumn name="postre" prefix="po"
+					databaseName="name" />
+			</AmbiguousColumns>
+			<Sentence>
    <![CDATA[
      SELECT
       #COLUMNS#
      FROM
-      public.menu m
-     INNER JOIN public.product p ON
-      m.first_plate = p.product_id
-     INNER JOIN public.product p ON
-      m.second_plate = p.product_id
-     INNER JOIN public.product p ON
-      m.dessert = p.product_id
-     #WHERE#
+      menu mn
+      join product pp on mn.first_plate=pp.product_id
+
+
+      join product ps on mn.second_plate=ps.product_id
+
+
+      join product po on mn.dessert=po.product_id
+
+	#WHERE#
+
    ]]>
-   </Sentence>
-  </Query>
- </Queries>
- 
+		</Sentence>
+		</Query>
+	</Queries>
+
 </JdbcEntitySetup>
