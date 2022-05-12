@@ -32,20 +32,20 @@ public class ProductService implements IProductService {
 	}
 
 	@Override
-	// @Secured({ PermissionsProviderSecured.SECURED })
+	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult productInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
 		return this.daoHelper.insert(this.productDao, attrMap);
 	}
 
 	@Override
-	// @Secured({ PermissionsProviderSecured.SECURED })
+	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult productUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
 			throws OntimizeJEERuntimeException {
 		return this.daoHelper.update(this.productDao, attrMap, keyMap);
 	}
 
 	@Override
-	// @Secured({ PermissionsProviderSecured.SECURED })
+	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult productDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
 		return this.daoHelper.delete(this.productDao, keyMap);
 	}
