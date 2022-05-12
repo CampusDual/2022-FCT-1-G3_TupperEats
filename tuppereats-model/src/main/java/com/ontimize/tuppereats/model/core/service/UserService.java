@@ -57,14 +57,14 @@ public class UserService implements IUserService {
 	public EntityResult userDelete(Map<?, ?> keyMap) {
 
 		boolean canDelete = true;
-		List<String> attrList = new ArrayList<String>();
+		List<String> attrList = new ArrayList<>();
 		attrList.add(UserRoleDao.ATTR_ID_USER_ROLE);
 		EntityResult query = this.daoHelper.query(this.userRoleDao, keyMap, attrList);
 
 		if (query.getCode() != EntityResult.OPERATION_WRONG) {
 
 			for (int i = 0; i < query.calculateRecordNumber(); i++) {
-				Map recordValues = query.getRecordValues(i);
+				Map<?, ?> recordValues = query.getRecordValues(i);
 				EntityResult delete = this.daoHelper.delete(userRoleDao, recordValues);
 
 				if (delete.getCode() == EntityResult.OPERATION_WRONG) {

@@ -1,1 +1,8 @@
-<p>products-home works!</p>
+<div fxFill fxLayout="column" fxLayoutAlign="start">
+  <o-table attr="productsTable" service="products" entity="product" keys="PRODUCT_ID"
+    columns="PRODUCT_ID;NAME;PHOTO;INGREDIENTS"
+    visible-columns="PHOTO;NAME;INGREDIENTS" query-rows="10">
+    <o-table-column attr="PHOTO" title="PHOTO" orderable="no" searchable="no" type="image" avatar="yes"
+    empty-image="assets/images/no-image.png" image-type="base64"></o-table-column>
+  </o-table>
+</div>

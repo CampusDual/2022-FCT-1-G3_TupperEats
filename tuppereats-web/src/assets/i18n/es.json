@@ -19,5 +19,10 @@
   "FORGOT_PWD": "¿Has olvidado tu contraseña?",
   "FOOTER_CREATED_BY": "Creado por Imatia Innovation",
   "FOOTER_RIGHTS": "Todos los derechos reservados",
-  "PRODUCTS": "Productos"
+  "PRODUCTS": "Productos",
+  "MENUS":"Menús",
+  "PRODUCT_ID":"Id. Producto",
+  "NAME":"Nombre",
+  "PHOTO":"Fotografía",
+  "INGREDIENTS":"Ingredientes"
 }

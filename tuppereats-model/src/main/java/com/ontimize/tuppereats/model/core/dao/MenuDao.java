@@ -12,7 +12,7 @@ import com.ontimize.jee.server.dao.jdbc.OntimizeJdbcDaoSupport;
 public class MenuDao extends OntimizeJdbcDaoSupport {
 
 	public static final String MENU_ID = "menu_id";
-	public static final String NAME = "name";
+	public static final String MENU_NAME = "menu_name";
 	public static final String PRICE = "price";
 	public static final String FIRST_PLATE = "first_plate";
 	public static final String SECOND_PLATE = "second_plate";
