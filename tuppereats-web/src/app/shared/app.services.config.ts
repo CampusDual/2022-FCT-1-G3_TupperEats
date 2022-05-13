@@ -4,5 +4,8 @@ export const SERVICE_CONFIG: Object = {
   },
   'menus': {
     'path': '/menus'
+  },
+  'users': {
+    'path': '/users'
   }
 };

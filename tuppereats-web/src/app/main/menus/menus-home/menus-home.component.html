@@ -1,9 +1,9 @@
 <div fxFill fxLayout="column" fxLayoutAlign="start">
-  <o-table attr="menusTable" service="menus" entity="menu" keys="MENU_ID"
-    columns="MENU_ID;MENU_NAME;PRICE;FIRST_PLATE;SECOND_PLATE;DESSERT"
-    visible-columns="MENU_NAME;FIRST_PLATE;SECOND_PLATE;DESSERT;PRICE" query-rows="10"
+  <o-table attr="menusTable" service="menus" entity="menu" keys="menu_id"
+    columns="menu_id;menu_name;first_plate;second_plate;dessert;price"
+    visible-columns="menu_name;first_plate;second_plate;dessert;price" query-rows="10"
     select-all-checkbox-visible = "yes" detail-mode= "dblclick">
-    <o-table-column attr="PRICE" type="currency" currency-symbol="€" currency-symbol-position="right"
+    <o-table-column attr="price" type="currency" currency-symbol="€" currency-symbol-position="right"
     thousand-separator="." decimal-separator="," class="o-table-column-centered"></o-table-column>
   </o-table>
 </div>

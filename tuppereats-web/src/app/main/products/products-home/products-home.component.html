@@ -1,8 +1,10 @@
-<div fxFill fxLayout="column" fxLayoutAlign="start">
-  <o-table attr="productsTable" service="products" entity="product" keys="PRODUCT_ID"
-    columns="PRODUCT_ID;NAME;PHOTO;INGREDIENTS"
-    visible-columns="PHOTO;NAME;INGREDIENTS" query-rows="10" delete-button ="no">
-    <o-table-column attr="PHOTO" title="PHOTO" orderable="no" searchable="no" type="image" avatar="yes"
+<o-form-layout-manager title="{{'PRODUCT' | oTranslate }}" separator=" " mode="dialog" label-columns="name">
+  <div fxFill>
+  <o-table attr="productsTable" service="products" entity="product" keys="product_id"
+    columns="product_id;name;photo;ingredients"
+    visible-columns="photo;name;ingredients" query-rows="10" delete-button ="no">
+    <o-table-column attr="photo" orderable="no" searchable="no" type="image" avatar="yes"
     empty-image="assets/images/no-image.png" image-type="base64"></o-table-column>
   </o-table>
 </div>
+</o-form-layout-manager>
