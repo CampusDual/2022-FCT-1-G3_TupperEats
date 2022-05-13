@@ -19,10 +19,17 @@
   "FORGOT_PWD": "¿Has olvidado tu contraseña?",
   "FOOTER_CREATED_BY": "Creado por Imatia Innovation",
   "FOOTER_RIGHTS": "Todos los derechos reservados",
-  "PRODUCTS": "Productos",
+  "PLATES": "Platos",
   "MENUS":"Menús",
   "PRODUCT_ID":"Id. Producto",
   "NAME":"Nombre",
   "PHOTO":"Fotografía",
-  "INGREDIENTS":"Ingredientes"
+  "INGREDIENTS":"Ingredientes",
+  "PREPARATION":"Preparación",
+  "MENU_ID":"Id. Menú",
+  "MENU_NAME":"Nombre del Menú",
+  "PRICE":"Precio",
+  "FIRST_PLATE":"Primer Plato",
+  "SECOND_PLATE":"Segundo Plato",
+  "DESSERT":"Postre"
 }
