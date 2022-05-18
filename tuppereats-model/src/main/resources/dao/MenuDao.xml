@@ -17,11 +17,11 @@
 		<Query id="default">
 			<AmbiguousColumns>
 				<AmbiguousColumn name="first_plate" prefix="pp"
-					databaseName="name" />
+					databaseName="product_id" />
 				<AmbiguousColumn name="second_plate" prefix="ps"
-					databaseName="name" />
+					databaseName="product_id" />
 				<AmbiguousColumn name="dessert" prefix="po"
-					databaseName="name" />
+					databaseName="product_id" />
 			</AmbiguousColumns>
 			<Sentence>
 			   <![CDATA[
