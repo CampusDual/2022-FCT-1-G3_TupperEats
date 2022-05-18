@@ -1,0 +1,18 @@
+<o-form service="menus" entity="menu" keys="menu_id" header-actions="R;I;U;D" show-header-navigation="no">
+  <o-text-input attr="menu_id" sql-type="INTEGER" enabled="no"></o-text-input>
+
+  <o-text-input attr="menu_name" required="yes"></o-text-input>
+  <o-real-input attr="price"></o-real-input>
+  <o-text-input attr="second_plate"></o-text-input>
+  <o-text-input attr="dessert"></o-text-input>
+
+  <!-- combos  -->
+  <o-combo #firstPlate attr="first_plate" label="Select product"
+  service="products" entity="product" value-column="product_id,name"
+  columns="product_id,name" visible-columns="name" keys="product_id">
+  </o-combo>
+  <o-combo #secondPlate attr="second_plate" label="Select product"
+  service="products" entity="product" value-column="product_id,name"
+  columns="product_id,name" visible-columns="name" keys="product_id">
+  </o-combo>
+</o-form>

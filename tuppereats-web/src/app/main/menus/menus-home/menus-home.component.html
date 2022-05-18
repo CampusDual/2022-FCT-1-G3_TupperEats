@@ -1,9 +1,14 @@
+<o-form-layout-manager title="{{'MENU' | oTranslate }}" separator=" " mode="dialog" label-columns="name">
 <div fxFill fxLayout="column" fxLayoutAlign="start">
   <o-table attr="menusTable" service="menus" entity="menu" keys="menu_id"
     columns="menu_id;menu_name;first_plate;second_plate;dessert;price"
     visible-columns="menu_name;first_plate;second_plate;dessert;price" query-rows="10"
-    select-all-checkbox-visible = "yes" detail-mode= "dblclick">
+    select-all-checkbox-visible = "yes" detail-mode= "dblclick" >
     <o-table-column attr="price" type="currency" currency-symbol="€" currency-symbol-position="right"
     thousand-separator="." decimal-separator="," class="o-table-column-centered"></o-table-column>
+    <o-table-column attr="first_plate" ></o-table-column>
+    <o-table-column attr="second_plate" ></o-table-column>
+    <o-table-column attr="dessert" ></o-table-column>
   </o-table>
 </div>
+</o-form-layout-manager>

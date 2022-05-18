@@ -1,0 +1,20 @@
+<o-form service="menus" entity="menu" keys="menu_id" header-actions="R;I;U;D" show-header-navigation="no">
+  <o-text-input attr="menu_id" sql-type="INTEGER" enabled="no"></o-text-input>
+  <o-text-input attr="menu_name" required="yes"></o-text-input>
+    <o-real-input attr="price" decimal-separator="," type="currency" currency-symbol="€" currency-symbol-position="right"
+    thousand-separator="."
+          class="input-padding" fxFlex="50"></o-real-input>
+    <o-integer-input attr="first_plate"></o-integer-input>
+    <o-integer-input attr="second_plate"></o-integer-input>
+    <o-integer-input attr="dessert"></o-integer-input>
+
+          <!-- <o-list-picker attr="name" oLocker label="Select plate"
+      service="products" entity="product" value-column="product_id"
+      columns="product_id;name" visible-columns="name" separator=", " fxFlex>
+    </o-list-picker> -->
+</o-form>
+
+
+
+
+
