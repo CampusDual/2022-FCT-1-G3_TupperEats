@@ -4,14 +4,19 @@
     <o-real-input attr="price" decimal-separator="," type="currency" currency-symbol="€" currency-symbol-position="right"
     thousand-separator="."
           class="input-padding" fxFlex="50"></o-real-input>
-    <o-integer-input attr="first_plate"></o-integer-input>
-    <o-integer-input attr="second_plate"></o-integer-input>
-    <o-integer-input attr="dessert"></o-integer-input>
 
-          <!-- <o-list-picker attr="name" oLocker label="Select plate"
-      service="products" entity="product" value-column="product_id"
-      columns="product_id;name" visible-columns="name" separator=", " fxFlex>
-    </o-list-picker> -->
+          <o-combo #firstPlate attr="first_plate" label="Select product"
+          service="products" entity="product" value-column="product_id"
+          columns="product_id;name" visible-columns="name" keys="product_id">
+          </o-combo>
+          <o-combo #secondPlate attr="second_plate" label="Select product"
+          service="products" entity="product" value-column="product_id"
+          columns="product_id;name" visible-columns="name" keys="product_id">
+          </o-combo>
+          <o-combo #dessert attr="dessert" label="Select product"
+          service="products" entity="product" value-column="product_id"
+          columns="product_id;name" visible-columns="name" keys="product_id">
+          </o-combo>
 </o-form>
 
 
