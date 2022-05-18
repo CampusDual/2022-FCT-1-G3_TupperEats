@@ -29,13 +29,13 @@
 			      #COLUMNS#
 			     FROM
 			      menu mn
-			      join product pp on mn.first_plate=pp.product_id
+			      left join product pp on mn.first_plate=pp.product_id
 			
 			
-			      join product ps on mn.second_plate=ps.product_id
+			      left join product ps on mn.second_plate=ps.product_id
 			
 			
-			      join product po on mn.dessert=po.product_id
+			      left join product po on mn.dessert=po.product_id
 			
 				#WHERE#
 			
