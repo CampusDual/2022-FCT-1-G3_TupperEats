@@ -22,6 +22,12 @@
 					databaseName="product_id" />
 				<AmbiguousColumn name="dessert" prefix="po"
 					databaseName="product_id" />
+					<AmbiguousColumn name="first_plate_name" prefix="pp"
+					databaseName="name" />
+				<AmbiguousColumn name="second_plate_name" prefix="ps"
+					databaseName="name" />
+				<AmbiguousColumn name="dessert_name" prefix="po"
+					databaseName="name" />
 			</AmbiguousColumns>
 			<Sentence>
 			   <![CDATA[
