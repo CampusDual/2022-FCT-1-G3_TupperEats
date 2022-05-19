@@ -1,6 +1,8 @@
-<div fxFill fxLayout="column" fxLayoutAlign="start">
+<o-form-layout-manager title="{{'USERS' | oTranslate }}" separator=" " mode="tab" label-columns="name">
+<div fxFill>
   <o-table attr="usersTable" service="users" entity="user" keys="user_"
     columns="user_;password;name;surname;email;nif;userblocked;lastpasswordupdate;firstlogin"
     visible-columns="user_;password;name;surname;email;nif;userblocked;lastpasswordupdate;firstlogin" query-rows="10" detail-mode= "dblclick">
   </o-table>
 </div>
+</o-form-layout-manager>
