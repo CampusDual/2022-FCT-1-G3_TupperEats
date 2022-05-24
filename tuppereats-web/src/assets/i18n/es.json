@@ -27,6 +27,7 @@
   "name": "Nombre",
   "photo": "Fotografía",
   "ingredients": "Ingredientes",
+  "name_category":"Categoría del plato",
   "preparation": "Preparación",
   "menu_id": "Id. Menú",
   "menu_name": "Nombre del Menú",

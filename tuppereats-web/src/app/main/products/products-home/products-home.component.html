@@ -1,8 +1,8 @@
 <o-form-layout-manager title="{{'PRODUCT' | oTranslate }}" separator=" " mode="dialog" label-columns="name">
   <div fxFill fxLayout="column" fxLayoutAlign="start">
-  <o-table attr="productsTable" service="products" entity="product" keys="product_id"
-    columns="product_id;name;photo;ingredients"
-    visible-columns="photo;name;ingredients" query-rows="20" select-all-checkbox-visible = "yes" detail-mode= "dblclick" >
+  <o-table class="o-table-column-centered" attr="productsTable" service="products" entity="product" keys="product_id"
+    columns="product_id;name;photo;ingredients;name_category"
+    visible-columns="photo;name;ingredients;name_category" query-rows="20" select-all-checkbox-visible = "yes" detail-mode= "dblclick" >
     <o-table-column attr="photo" orderable="no" searchable="no" type="image" avatar="yes"
     empty-image="assets/images/no-image.png" image-type="base64"></o-table-column>
   </o-table>

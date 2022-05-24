@@ -8,9 +8,27 @@
  <DeleteKeys>
   <Column>product_id</Column>
  </DeleteKeys>
- 
  <UpdateKeys>
   <Column>product_id</Column>
  </UpdateKeys>
  <GeneratedKey>product_id</GeneratedKey>
+ <Queries>
+		<Query id="default">
+			<Sentence>
+			   <![CDATA[
+			     SELECT
+			      #COLUMNS#
+			     FROM
+			      product p
+			      left join product_category pc on p.product_category_id = pc.id_product_category
+			
+			
+			      left join product_type pt on p.id_product_type = pt.product_type_id
+			
+				#WHERE#
+			
+			   ]]>
+		</Sentence>
+		</Query>
+	</Queries>
 </JdbcEntitySetup>

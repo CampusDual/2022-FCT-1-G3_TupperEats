@@ -27,6 +27,7 @@
   "name": "Name",
   "photo": "Photo",
   "ingredients": "Ingredients",
+  "name_category":"Category Name",
   "preparation": "Preparation",
   "menu_id": "Id. Menu",
   "menu_name": "Menu Name",
@@ -45,5 +46,6 @@
   "password":"Password",
   "userblocked": "User Blocked",
   "lastpasswordupdate": "Last Password",
-  "firstlogin": "First Login"
+  "firstlogin": "First Login",
+  "product_category_id":"Product category"
 }
