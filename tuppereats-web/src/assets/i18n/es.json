@@ -46,5 +46,7 @@
   "password":"Contraseña",
   "userblocked": "Usuario Bloqueado",
   "lastpasswordupdate": "Última Contraseña",
-  "firstlogin": "Primer Login"
+  "firstlogin": "Primer Login",
+  "product_category_id":"Categoría del Producto",
+  "id_product_type":"Tipo de plato"
 }

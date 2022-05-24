@@ -70,5 +70,4 @@ public class MasterProductService implements IMasterProductService {
 	public EntityResult typeDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
 		return this.daoHelper.delete(this.productTypeDao, keyMap);
 	}
-
 }

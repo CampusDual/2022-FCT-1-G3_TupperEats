@@ -26,7 +26,32 @@
 			      left join product_type pt on p.id_product_type = pt.product_type_id
 			
 				#WHERE#
-			
+			   ]]>
+		</Sentence>
+		</Query>
+		
+		<Query id="plate_type">
+			<Sentence>
+			   <![CDATA[
+			     SELECT
+			      #COLUMNS#
+			     FROM
+			      product     
+				#WHERE_CONCAT#
+					id_product_type = 3	
+			   ]]>
+		</Sentence>
+		</Query>
+		
+		<Query id="dessert_type">
+			<Sentence>
+			   <![CDATA[
+			     SELECT
+			      #COLUMNS#
+			     FROM
+			      product     
+				#WHERE_CONCAT#
+					id_product_type = 4	
 			   ]]>
 		</Sentence>
 		</Query>

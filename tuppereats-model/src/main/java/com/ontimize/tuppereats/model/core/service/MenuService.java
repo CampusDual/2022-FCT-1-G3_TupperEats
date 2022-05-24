@@ -27,6 +27,7 @@ public class MenuService implements IMenuService{
 			throws OntimizeJEERuntimeException {
 		 return this.daoHelper.query(this.menuDao, keyMap, attrList);
 	}
+
 	@Override
 	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult menuInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
@@ -45,4 +46,5 @@ public class MenuService implements IMenuService{
 	}
 	
 	
+
 }

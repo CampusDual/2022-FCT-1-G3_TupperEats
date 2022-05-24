@@ -22,7 +22,7 @@
 					databaseName="product_id" />
 				<AmbiguousColumn name="dessert" prefix="po"
 					databaseName="product_id" />
-					<AmbiguousColumn name="first_plate_name" prefix="pp"
+				<AmbiguousColumn name="first_plate_name" prefix="pp"
 					databaseName="name" />
 				<AmbiguousColumn name="second_plate_name" prefix="ps"
 					databaseName="name" />
@@ -44,10 +44,8 @@
 			      left join product po on mn.dessert=po.product_id
 			
 				#WHERE#
-			
 			   ]]>
 		</Sentence>
 		</Query>
 	</Queries>
-
 </JdbcEntitySetup>

@@ -47,5 +47,6 @@
   "userblocked": "User Blocked",
   "lastpasswordupdate": "Last Password",
   "firstlogin": "First Login",
-  "product_category_id":"Product category"
+  "product_category_id":"Product category",
+  "id_product_type":"Product type"
 }

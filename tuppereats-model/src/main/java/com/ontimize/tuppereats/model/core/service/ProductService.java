@@ -32,6 +32,18 @@ public class ProductService implements IProductService {
 	}
 
 	@Override
+	public EntityResult plateTypeQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.productDao, keyMap, attrList, ProductDao.QUERY_PLATE_TYPE);
+	}
+
+	@Override
+	public EntityResult dessertTypeQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.productDao, keyMap, attrList, ProductDao.QUERY_DESSERT_TYPE);
+	}
+
+	@Override
 	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult productInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
 		return this.daoHelper.insert(this.productDao, attrMap);
@@ -49,5 +61,4 @@ public class ProductService implements IProductService {
 	public EntityResult productDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
 		return this.daoHelper.delete(this.productDao, keyMap);
 	}
-
 }

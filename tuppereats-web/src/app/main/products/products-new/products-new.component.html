@@ -3,6 +3,14 @@
 
   <o-text-input attr="name" required="yes"></o-text-input>
 
+  <o-combo attr="product_category_id" service="masterproducts" entity="category" value-column="id_product_category"
+    columns="id_product_category;name_category" visible-columns="name_category" keys="id_product_category">
+  </o-combo>
+
+  <o-combo attr="id_product_type" service="masterproducts" entity="type" value-column="product_type_id"
+    columns="product_type_id;name_type" visible-columns="name_type" keys="product_type_id">
+  </o-combo>
+
   <o-row>
     <o-image id="product_photo" attr="photo" empty-image="assets/images/no-image.png" sql-type="other" width="100px"
       fxFlex="40"></o-image>
