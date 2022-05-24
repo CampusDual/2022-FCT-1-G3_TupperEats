@@ -42,6 +42,7 @@
   "surname": "Apellidos",
   "email": "Email",
   "nif": "NIF",
+  "password":"Contraseña",
   "userblocked": "Usuario Bloqueado",
   "lastpasswordupdate": "Última Contraseña",
   "firstlogin": "Primer Login"

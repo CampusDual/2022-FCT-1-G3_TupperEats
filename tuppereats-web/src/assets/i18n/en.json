@@ -42,6 +42,7 @@
   "surname": "Surname",
   "email": "Email",
   "nif": "NIF",
+  "password":"Password",
   "userblocked": "User Blocked",
   "lastpasswordupdate": "Last Password",
   "firstlogin": "First Login"

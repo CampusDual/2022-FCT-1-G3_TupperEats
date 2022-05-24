@@ -1,8 +1,8 @@
-<o-form-layout-manager title="{{'USERS' | oTranslate }}" separator=" " mode="dialog" label-columns="name">
+<o-form-layout-manager title="{{'USERS' | oTranslate }}" separator=" " mode="tab" label-columns="name">
 <div fxFill fxLayout="column" fxLayoutAlign="start">
   <o-table attr="usersTable" service="users" entity="user" keys="user_"
     columns="user_;password;name;surname;email;nif;userblocked;lastpasswordupdate;firstlogin"
-    visible-columns="user_;password;name;surname;email;nif;userblocked;lastpasswordupdate;firstlogin" query-rows="10" select-all-checkbox-visible = "yes" detail-mode= "dblclick">
+    visible-columns="user_;password;name;surname;email;nif" query-rows="10" select-all-checkbox-visible = "yes" detail-mode= "dblclick">
   </o-table>
 </div>
 </o-form-layout-manager>
