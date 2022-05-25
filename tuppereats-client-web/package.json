@@ -1,14 +1,14 @@
 {
-  "name": "ontimize-web-ngx-jee-seed",
+  "name": "tupper-eats-client-web",
   "version": "8.2.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4299",
+    "start": "ng serve --port 4201 -o --host localhost",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "production": "ng build --prod=true --baseHref=/ontimize-web-ngx-jee-seed/"
+    "production": "ng build --prod=true --baseHref=/tupper-eats-client-web/"
   },
   "private": true,
   "engines": {
