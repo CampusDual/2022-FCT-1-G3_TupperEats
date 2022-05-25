@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ontimize-web-ngx-jee-seed": {
+    "tupper-eats-client-web": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
          "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ontimize-web-ngx-jee-seed",
+            "outputPath": "dist/tupper-eats-client-web",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -76,18 +76,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ontimize-web-ngx-jee-seed:build"
+            "browserTarget": "tupper-eats-client-web:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ontimize-web-ngx-jee-seed:build:production"
+              "browserTarget": "tupper-eats-client-web:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ontimize-web-ngx-jee-seed:build"
+            "browserTarget": "tupper-eats-client-web:build"
           }
         },
         "test": {
@@ -125,15 +125,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ontimize-web-ngx-jee-seed:serve"
+            "devServerTarget": "tupper-eats-client-web:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ontimize-web-ngx-jee-seed:serve:production"
+              "devServerTarget": "tupper-eats-client-web:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "ontimize-web-ngx-jee-seed"
+  "defaultProject": "tupper-eats-client-web"
 }
