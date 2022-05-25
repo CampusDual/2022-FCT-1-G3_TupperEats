@@ -4,7 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 export const routes: Routes = [
   { path: 'main', loadChildren: () => import('./main/main.module').then(m => m.MainModule) },
   { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
-  { path: '', redirectTo: 'main', pathMatch: 'full' }
+  { path: 'homepage', loadChildren: () => import('./homepage/homepage.module').then(m => m.HomepageModule) },
+  { path: '', redirectTo: 'homepage', pathMatch: 'full' }
 ];
 
 const opt = {
