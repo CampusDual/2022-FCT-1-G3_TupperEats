@@ -28,6 +28,12 @@
 					databaseName="name" />
 				<AmbiguousColumn name="dessert_name" prefix="po"
 					databaseName="name" />
+				<AmbiguousColumn name="first_plate_photo" prefix="pp"
+					databaseName="photo" />
+				<AmbiguousColumn name="second_plate_photo" prefix="ps"
+					databaseName="photo" />
+				<AmbiguousColumn name="dessert_photo" prefix="po"
+					databaseName="photo" />
 			</AmbiguousColumns>
 			<Sentence>
 			   <![CDATA[
