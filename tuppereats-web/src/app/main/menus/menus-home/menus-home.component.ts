@@ -11,6 +11,7 @@ export class MenusHomeComponent implements OnInit {
  constructor(protected injector: Injector) {
    super(injector);
     }
+
   getCellData(cellvalue: any, rowvalue?: any): string{
    return  rowvalue[""]+" "+rowvalue["OFFICEID"]+" "+rowvalue["CDID"]+" "+rowvalue["ANID"];
   }
