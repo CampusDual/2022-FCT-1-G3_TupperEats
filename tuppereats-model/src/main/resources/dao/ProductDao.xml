@@ -37,8 +37,8 @@
 			      #COLUMNS#
 			     FROM
 			      product     
-				#WHERE_CONCAT#
-					id_product_type = 3	
+				 WHERE
+					id_product_type=3
 			   ]]>
 		</Sentence>
 		</Query>
@@ -50,8 +50,8 @@
 			      #COLUMNS#
 			     FROM
 			      product     
-				#WHERE_CONCAT#
-					id_product_type = 4	
+				WHERE
+					id_product_type=4	
 			   ]]>
 		</Sentence>
 		</Query>
