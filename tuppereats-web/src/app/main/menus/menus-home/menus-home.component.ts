@@ -1,4 +1,4 @@
-import { Component, Injector, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menus-home',
@@ -7,13 +7,9 @@ import { Component, Injector, OnInit, TemplateRef, ViewChild } from '@angular/co
 })
 export class MenusHomeComponent implements OnInit {
 
-  @ViewChild('templateref', { read: TemplateRef, static: false }) public templateref: TemplateRef<any>;
- constructor(protected injector: Injector) {
-   super(injector);
-    }
+  constructor() { }
 
-  getCellData(cellvalue: any, rowvalue?: any): string{
-   return  rowvalue[""]+" "+rowvalue["OFFICEID"]+" "+rowvalue["CDID"]+" "+rowvalue["ANID"];
+  ngOnInit() {
   }
 
 }

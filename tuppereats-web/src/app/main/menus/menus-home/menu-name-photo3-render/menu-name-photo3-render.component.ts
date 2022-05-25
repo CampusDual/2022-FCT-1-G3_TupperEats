@@ -2,11 +2,11 @@ import { Component, Injector, OnInit, TemplateRef, ViewChild } from '@angular/co
 import { OBaseTableCellRenderer } from 'ontimize-web-ngx';
 
 @Component({
-  selector: 'app-menu-name-photo-render',
-  templateUrl: './menu-name-photo-render.component.html',
-  styleUrls: ['./menu-name-photo-render.component.css']
+  selector: 'app-menu-name-photo3-render',
+  templateUrl: './menu-name-photo3-render.component.html',
+  styleUrls: ['./menu-name-photo3-render.component.css']
 })
-export class MenuNamePhotoRenderComponent extends OBaseTableCellRenderer {
+export class MenuNamePhoto3RenderComponent extends OBaseTableCellRenderer {
 
   @ViewChild('templateref', { read: TemplateRef, static: false }) public templateref: TemplateRef<any>;
 
@@ -14,10 +14,8 @@ export class MenuNamePhotoRenderComponent extends OBaseTableCellRenderer {
     super(injector);
     }
 
-  public dataBase64= "data:image/png;base64";
-
   getCellData(cellvalue: any, rowvalue?: any): string{
-    return  rowvalue["first_plate_name"];
+    return  rowvalue["dessert_name"]+" "+rowvalue["dessert_photo"];
   }
 
 }
