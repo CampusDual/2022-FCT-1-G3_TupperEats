@@ -1,13 +1,79 @@
-.navlist{
+.nav{
+  padding: 20px;
   display: flex;
   flex-direction: row;
+  background-color: antiquewhite;
+  border-bottom: 1px solid black;
 }
-
-nav{
-  display: flex;
-  flex-direction: row;
+.nav .nav_logo p{
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  word-spacing: 1.2px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: bold;
+  font-variant: normal;
+  text-transform: none;
+  padding-right: 20px;
+  border-right: 1px solid black;
 }
-
-.navlist ul{
+.nav .nav_list ul{
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+
+}
+.nav .nav_list ul li{
+  padding: 10px;
+}
+
+/* Main  */
+.main{
+  padding: 100px;
+  background-color: antiquewhite;
+}
+.main .main_title{
+  margin-bottom: 40px;
+}
+.main .main_sub{
+  padding: 40px;
+}
+.main .main_sub_button{
+  background-color: chocolate;
+  width: 150px;
+  height: 60px;
+  margin-top: 30px;
+  text-align: center;
+}
+.main .main_sub_button span{
+  color: antiquewhite;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+}
+.main_2{
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+}
+.main_2_gallery{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.main_2_gallery_item{
+  max-width: 300px;
+  text-overflow: clip;
+}
+
+.main_2_gallery_item img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.main_3{
+  margin-top: 9rem;
 }
