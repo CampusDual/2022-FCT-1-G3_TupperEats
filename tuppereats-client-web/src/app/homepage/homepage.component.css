@@ -1,0 +1,13 @@
+.navlist{
+  display: flex;
+  flex-direction: row;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+}
+
+.navlist ul{
+  list-style-type: none;
+}
