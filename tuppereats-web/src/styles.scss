@@ -4,3 +4,12 @@
 .o-table-column-centered{
   text-align: center;
 }
+.image_render_menu{
+  width: 32px;
+  height: 32px;
+  margin: 1px auto;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}

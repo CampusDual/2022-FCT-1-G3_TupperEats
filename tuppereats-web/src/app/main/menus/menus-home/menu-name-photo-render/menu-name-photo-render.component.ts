@@ -14,8 +14,6 @@ export class MenuNamePhotoRenderComponent extends OBaseTableCellRenderer {
     super(injector);
     }
 
-  public dataBase64= "data:image/png;base64";
-
   getCellData(cellvalue: any, rowvalue?: any): string{
     return  rowvalue["first_plate_name"];
   }
