@@ -26,9 +26,48 @@ body{
   font-variant: normal;
   text-transform: none;
 }
+.box-centered{
+  margin: auto;
+}
 .text-centered{
   text-align: center;
 }
 .margin-on-top{
   margin-top: 1rem;
+}
+.margin-on-top12{
+  margin-top: 12rem !important;
+}
+.max-width600{
+  max-width: 600px;
+  margin: auto;
+}
+.max-width900{
+  max-width: 900px;
+  margin: auto;
+}
+.justified-text{
+  text-align: justify;
+  max-width: 600px;
+}
+.no-margin-top{
+  margin-top:  0rem !important;
+}
+.margin-top-2{
+  margin-top: 1rem  !important;
+}
+.margin-top-4{
+  margin-top: 4rem  !important;
+}
+.margin-top-8{
+  margin-top: 8rem  !important;
+}
+.margin-top-12{
+  margin-top: 12rem  !important;
+}
+.bold-text{
+  font-weight: bold !important;
+}
+.l-float{
+  float: left !important;
 }

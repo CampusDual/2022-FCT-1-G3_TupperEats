@@ -1,9 +1,11 @@
 .nav{
-  padding: 20px;
+  padding-inline: 20px;
   display: flex;
   flex-direction: row;
   background-color: antiquewhite;
   border-bottom: 1px solid black;
+  position: fixed;
+  width: 100%;
 }
 .nav .nav_logo p{
   font-size: 20px;
@@ -30,8 +32,8 @@
 
 /* Main  */
 .main{
-  padding: 100px;
-  background-color: antiquewhite;
+  padding: 160px 100px;
+  background-color: aliceblue;
 }
 .main .main_title{
   margin-bottom: 40px;
@@ -66,6 +68,11 @@
   max-width: 300px;
   text-overflow: clip;
 }
+.main_3{
+  max-width: 600px;
+  text-overflow: clip;
+  margin: auto;
+}
 
 .main_2_gallery_item img{
   display: block;
@@ -76,4 +83,21 @@
 
 .main_3{
   margin-top: 9rem;
+}
+
+.main_4{
+  margin-top: 12rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.main_4_first{
+  grid-area: 1 / 1 / 2 / 2;
+  margin: auto;
+}
+.main_4_second{
+  grid-area: 1 / 2 / 2 / 3;
+  max-width: 600px;
 }
