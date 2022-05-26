@@ -6,10 +6,15 @@ import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import com.ontimize.tuppereats.api.core.service.ISuscriptionCustomerService;
 import com.ontimize.tuppereats.model.core.dao.SuscriptionCustomerDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
 
+
+@Service("SuscriptionCustomerService")
+@Lazy
 public class SuscriptionCustomerService implements ISuscriptionCustomerService {
     @Autowired
     private SuscriptionCustomerDao suscriptionCustomerDao;

@@ -1,0 +1,13 @@
+<o-form-layout-manager title="{{'SUSCRIPTIONS' | oTranslate }}" separator=" " mode="dialog"
+  label-columns="id_customer;id_suscription">
+  <div fxFill>
+    <o-table attr="suscription_customer" service="suscriptionCustomers" entity="suscriptionCustomer"
+      keys="suscription_customer_id" columns="suscription_customer_id;id_customer;id_suscription;start_date_suscription_customer;end_date_suscription_customer;active_suscription_customer" visible-columns="suscription_customer_id;id_customer;id_suscription;start_date_suscription_customer;end_date_suscription_customer;active_suscription_customer" query-rows="15">
+      <!-- <o-table-column attr="EMPLOYEEPHOTO" title="EMPLOYEEPHOTO" orderable="no" searchable="no" type="image" avatar="no"
+        empty-image="assets/images/no-image.png" image-type="base64" width="150px"></o-table-column>
+      <o-table-column attr="EMPLOYEESTARTDATE" title="EMPLOYEESTARTDATE" type="date" format="LL"></o-table-column>
+      <o-table-column attr="EMPLOYEENAME" title="EMPLOYEENAME" width="150px"></o-table-column>
+      <o-table-column attr="EMPLOYEESURNAME" title="EMPLOYEESURNAME" width="150px"></o-table-column> -->
+    </o-table>
+  </div>
+</o-form-layout-manager>

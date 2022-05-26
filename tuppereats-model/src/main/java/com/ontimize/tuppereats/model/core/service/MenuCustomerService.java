@@ -2,16 +2,18 @@ package com.ontimize.tuppereats.model.core.service;
 
 import com.ontimize.jee.common.dto.EntityResult;
 import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
-import com.ontimize.jee.common.security.PermissionsProviderSecured;
 import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import com.ontimize.tuppereats.api.core.service.IMenuCustomerService;
 import com.ontimize.tuppereats.model.core.dao.MenuCustomerDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.annotation.Secured;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
 
+@Service("MenuCustomerService")
+@Lazy
 public class MenuCustomerService implements IMenuCustomerService {
     @Autowired
     private MenuCustomerDao menuCustomerDao;
