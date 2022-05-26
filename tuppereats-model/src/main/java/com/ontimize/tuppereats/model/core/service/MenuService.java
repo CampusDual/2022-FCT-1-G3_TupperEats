@@ -17,6 +17,7 @@ import com.ontimize.tuppereats.model.core.dao.MenuDao;
 
 @Service("MenuService")
 @Lazy
+
 public class MenuService implements IMenuService{
 	@Autowired private MenuDao menuDao;
 	@Autowired private DefaultOntimizeDaoHelper daoHelper;

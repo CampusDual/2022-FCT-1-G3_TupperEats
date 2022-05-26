@@ -17,5 +17,6 @@ public class SuscriptionCustomerRestController extends ORestController<ISuscript
     @Override
     public ISuscriptionCustomerService getService() {
         return this.suscriptionCustomerService;
+
     }
 }

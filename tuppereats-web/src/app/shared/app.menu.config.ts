@@ -10,3 +10,4 @@ export const MENU_CONFIG: MenuRootItem[] = [
   { id: 'logout', name: 'LOGOUT', route: '/login', icon: 'power_settings_new', confirm: 'yes' }
 
 ];
+

@@ -18,3 +18,4 @@ export const SERVICE_CONFIG: Object = {
           'path': '/suscriptionCustomers'
         }
 };
+

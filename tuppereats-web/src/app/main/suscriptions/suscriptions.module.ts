@@ -15,3 +15,4 @@ import { SuscriptionsHomeComponent } from './suscriptions-home/suscriptions-home
   ]
 })
 export class SuscriptionsModule { }
+
