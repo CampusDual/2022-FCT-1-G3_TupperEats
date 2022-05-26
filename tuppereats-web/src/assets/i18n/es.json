@@ -48,5 +48,6 @@
   "lastpasswordupdate": "Última Contraseña",
   "firstlogin": "Primer Login",
   "product_category_id":"Categoría del Producto",
-  "id_product_type":"Tipo de plato"
+  "id_product_type":"Tipo de plato",
+  "CUSTOMERS":"Clientes"
 }

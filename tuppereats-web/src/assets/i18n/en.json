@@ -48,5 +48,6 @@
   "lastpasswordupdate": "Last Password",
   "firstlogin": "First Login",
   "product_category_id":"Product category",
-  "id_product_type":"Product type"
+  "id_product_type":"Product type",
+  "CUSTOMERS":"Customers"
 }
