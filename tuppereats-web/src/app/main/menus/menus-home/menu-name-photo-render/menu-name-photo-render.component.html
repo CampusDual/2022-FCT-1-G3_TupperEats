@@ -1,1 +1,5 @@
-<p>menu-name-photo-render works!</p>
+<ng-template #templateref let-cellvalue="cellvalue" let-rowvalue="rowvalue">
+  {{getCellData(cellvalue, rowvalue)}}
+  <o-image attr="first_plate_photo" [data]="dataBase64" type="image" avatar="yes"
+  empty-image="assets/images/no-image.png" image-type="base64"></o-image>>
+</ng-template>
