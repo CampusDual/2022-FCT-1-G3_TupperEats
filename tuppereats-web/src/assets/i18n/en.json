@@ -49,5 +49,11 @@
   "firstlogin": "First Login",
   "product_category_id":"Product category",
   "id_product_type":"Product type",
-  "CUSTOMERS":"Customers"
+  "CUSTOMERS":"Customers",
+  "customer_name":"Name",
+  "customer_surname":"Surname",
+  "customer_adress":"Adress",
+  "customer_email":"Email",
+  "customer_phone":"Phone",
+  "customer_city":"City"
 }

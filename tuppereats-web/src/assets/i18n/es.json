@@ -49,5 +49,11 @@
   "firstlogin": "Primer Login",
   "product_category_id":"Categoría del Producto",
   "id_product_type":"Tipo de plato",
-  "CUSTOMERS":"Clientes"
+  "CUSTOMERS":"Clientes",
+  "customer_name":"Nombre",
+  "customer_surname":"Apellidos",
+  "customer_adress":"Dirección",
+  "customer_email":"Email",
+  "customer_phone":"Teléfono",
+  "customer_city":"Ciudad"
 }
