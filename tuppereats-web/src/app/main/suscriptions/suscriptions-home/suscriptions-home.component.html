@@ -1,8 +1,8 @@
 <o-form-layout-manager title="{{'SUSCRIPTIONS' | oTranslate }}" separator=" " mode="tab" label-columns="id_customer;id_suscription">
   <div fxFill fxLayout="column" fxLayoutAlign="start">
-    <o-table  class="o-table-column-centered" attr="suscription_customer" service="suscriptionCustomers" entity="suscriptionCustomer"
-      keys="suscription_customer_id" columns="suscription_customer_id;id_customer;id_suscription;start_date_suscription_customer;end_date_suscription_customer"
-      visible-columns="id_customer;id_suscription;start_date_suscription_customer;end_date_suscription_customer"
+    <o-table  class="o-table-column-centered" attr="suscription_customer" service="suscriptionCustomers" entity="suscriptionCustomer" keys="suscription_customer_id"
+      columns="suscription_customer_id;id_customer;id_suscription;start_date_suscription_customer;end_date_suscription_customer;customer_name;customer_surname;suscription_name"
+      visible-columns="customer_name;customer_surname;suscription_name;start_date_suscription_customer;end_date_suscription_customer"
       query-rows="20" select-all-checkbox-visible = "yes" detail-mode= "dblclick">
       <o-table-column attr="start_date_suscription_customer" type="date" format="LL"></o-table-column>
       <o-table-column attr="end_date_suscription_customer" type="date" format="LL"></o-table-column>

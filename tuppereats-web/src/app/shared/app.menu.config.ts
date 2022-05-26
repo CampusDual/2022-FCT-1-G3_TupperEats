@@ -8,6 +8,5 @@ export const MENU_CONFIG: MenuRootItem[] = [
   { id: 'customers', name: 'CUSTOMERS', icon: 'people', route: '/main/customers' },
   { id: 'suscriptions', name: 'SUSCRIPTIONS', icon: 'shopping_cart', route: '/main/suscriptions' },
   { id: 'logout', name: 'LOGOUT', route: '/login', icon: 'power_settings_new', confirm: 'yes' }
-
 ];
 
