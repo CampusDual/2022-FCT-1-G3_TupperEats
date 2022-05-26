@@ -15,7 +15,7 @@ export class MenuNamePhoto2RenderComponent extends OBaseTableCellRenderer {
     }
 
   getCellData(cellvalue: any, rowvalue?: any): string{
-    return  rowvalue["second_plate_name"]+" "+rowvalue["second_plate_photo"];
+    return  rowvalue["second_plate_name"];
   }
 
 }
