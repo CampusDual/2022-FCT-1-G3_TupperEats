@@ -8,7 +8,8 @@ import { CustomersHomeComponent } from './customers-home/customers-home.componen
 const routes: Routes =  [{
   path : '',
   component: CustomersHomeComponent
-},{
+},
+{
   path: ":customer_id",
   component: CustomersDetailComponent
 }];

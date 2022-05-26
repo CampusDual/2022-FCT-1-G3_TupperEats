@@ -11,11 +11,11 @@ export const SERVICE_CONFIG: Object = {
   'masterproducts': {
     'path': '/masterproducts'
   },
-     'customers': {
-       'path': '/customers'
-     },
-        'suscriptionCustomers': {
-          'path': '/suscriptionCustomers'
-        }
+  'customers': {
+    'path': '/customers'
+  },
+  'suscriptionCustomers': {
+    'path': '/suscriptionCustomers'
+  }
 };
 

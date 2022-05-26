@@ -59,6 +59,7 @@
   "SUSCRIPTIONS":"Suscripciones",
   "id_customer":"Id cliente",
   "id_suscription":"Id suscripción",
+  "suscription_name":"Tipo de Suscripción",
   "start_date_suscription_customer":"Inicio suscripción",
   "end_date_suscription_customer":"Fin suscripción"
 }
