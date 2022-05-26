@@ -10,5 +10,8 @@ export const SERVICE_CONFIG: Object = {
   },
   'masterproducts': {
     'path': '/masterproducts'
+  },
+  'customers': {
+    'path': '/customers'
   }
 };
