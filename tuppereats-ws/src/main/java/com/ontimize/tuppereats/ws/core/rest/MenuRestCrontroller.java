@@ -13,6 +13,7 @@ import com.ontimize.tuppereats.api.core.service.IMenuService;
 public class MenuRestCrontroller extends ORestController<IMenuService> {
 
 		@Autowired
+
 		private IMenuService menuService;
 
 		@Override

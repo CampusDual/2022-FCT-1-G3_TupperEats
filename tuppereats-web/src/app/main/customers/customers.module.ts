@@ -15,3 +15,4 @@ import { CustomersHomeComponent } from './customers-home/customers-home.componen
   ]
 })
 export class CustomersModule { }
+
