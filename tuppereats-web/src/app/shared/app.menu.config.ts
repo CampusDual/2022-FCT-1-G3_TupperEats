@@ -6,7 +6,7 @@ export const MENU_CONFIG: MenuRootItem[] = [
   { id: 'menus', name: 'MENUS', icon: 'restaurant_menu', route: '/main/menus' },
   { id: 'users', name: 'USERS', icon: 'supervisor_account', route: '/main/users' },
   { id: 'customers', name: 'CUSTOMERS', icon: 'people', route: '/main/customers' },
-  { id: 'suscriptions', name: 'SUSCRIPTIONS', icon: 'supervisor_account', route: '/main/suscriptions' },
+  { id: 'suscriptions', name: 'SUSCRIPTIONS', icon: 'shopping_cart', route: '/main/suscriptions' },
   { id: 'logout', name: 'LOGOUT', route: '/login', icon: 'power_settings_new', confirm: 'yes' }
 
 ];

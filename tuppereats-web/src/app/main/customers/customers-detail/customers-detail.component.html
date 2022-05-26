@@ -1,0 +1,19 @@
+<o-form service="customers" entity="customer" keys="customer_id" header-actions="R;I;U;D" show-header-navigation="no">
+  <o-text-input attr="customer_id" sql-type="INTEGER" enabled="no"></o-text-input>
+
+  <o-row>
+   <o-text-input attr="customer_name" required="yes"></o-text-input>
+  <o-text-input  class="users-margin" attr="customer_surname" required="yes" fxFlex="33"></o-text-input>
+  </o-row>
+
+  <o-row>
+    <o-text-input  attr="customer_email" required="yes" fxFlex="33"></o-text-input>
+    <o-text-input  class="users-margin" attr="customer_phone" required="yes" fxFlex="33"></o-text-input>
+  </o-row>
+
+  <o-row>
+    <o-text-input  attr="customer_adress" required="yes" fxFlex="33"></o-text-input>
+    <o-text-input  class="users-margin" attr="customer_city" required="yes" fxFlex="33"></o-text-input>
+  </o-row>
+
+</o-form>

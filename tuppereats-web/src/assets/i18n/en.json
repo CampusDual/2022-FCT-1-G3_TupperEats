@@ -55,5 +55,10 @@
   "customer_adress":"Adress",
   "customer_email":"Email",
   "customer_phone":"Phone",
-  "customer_city":"City"
+  "customer_city":"City",
+  "SUSCRIPTIONS":"Suscriptions",
+  "id_customer":"Id customer",
+  "id_suscription":"Id suscription",
+  "start_date_suscription_customer":"Start date suscription",
+  "end_date_suscription_customer":"End date suscription"
 }
