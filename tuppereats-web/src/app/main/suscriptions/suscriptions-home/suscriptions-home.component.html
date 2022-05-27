@@ -1,4 +1,4 @@
-<o-form-layout-manager title="{{'SUSCRIPTIONS' | oTranslate }}" separator=" " mode="tab" label-columns="id_customer;id_suscription">
+<o-form-layout-manager title="{{'SUSCRIPTIONS' | oTranslate }}" separator=" " mode="tab" label-columns="customer_name;customer_surname">
   <div fxFill fxLayout="column" fxLayoutAlign="start">
     <o-table  class="o-table-column-centered" attr="suscription_customer" service="suscriptionCustomers" entity="suscriptionCustomer" keys="suscription_customer_id"
       columns="suscription_customer_id;id_customer;id_suscription;start_date_suscription_customer;end_date_suscription_customer;customer_name;customer_surname;suscription_name"

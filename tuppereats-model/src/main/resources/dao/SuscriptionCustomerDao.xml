@@ -26,5 +26,39 @@
 			   ]]>
 		</Sentence>
 		</Query>
+		<Query id="suscriptionMenuQuery">
+		<AmbiguousColumns>
+                <AmbiguousColumn name="first_plate" prefix="pp"
+                    databaseName="product_id" />
+                <AmbiguousColumn name="second_plate" prefix="ps"
+                    databaseName="product_id" />
+                <AmbiguousColumn name="dessert" prefix="po"
+                    databaseName="product_id" />
+                <AmbiguousColumn name="first_plate_name" prefix="pp"
+                    databaseName="name" />
+                <AmbiguousColumn name="second_plate_name" prefix="ps"
+                    databaseName="name" />
+                <AmbiguousColumn name="dessert_name" prefix="po"
+                    databaseName="name" />
+                <AmbiguousColumn name="id_customer_suscription" prefix="sc"
+                    databaseName="id_customer" />
+                <AmbiguousColumn name="id_customer_menu" prefix="mc"
+                    databaseName="id_customer" />
+            </AmbiguousColumns>
+			<Sentence>
+			   <![CDATA[
+			     SELECT
+			      #COLUMNS#
+			     FROM
+			   	 suscription_customer sc
+				JOIN menu_customer mc ON sc.suscription_customer_id = mc.id_suscription_customer
+				JOIN menu m ON mc.id_menu = m.menu_id
+				JOIN product pp ON m.first_plate = pp.product_id
+				JOIN product ps ON m.second_plate = ps.product_id
+				JOIN product po ON m.dessert = po.product_id
+				#WHERE#
+			   ]]>
+		</Sentence>
+		</Query>
 	</Queries>
 </JdbcEntitySetup>
