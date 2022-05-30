@@ -18,6 +18,7 @@ public class SuscriptionCustomerDao extends OntimizeJdbcDaoSupport{
     public static final String ID_SUSCRIPTION="id_suscription";
     public static final String START_DATE_SUSCRIPTION_CUSTOMER="start_date_suscription_customer";
     public static final String END_DATE_SUSCRIPTION_CUSTOMER="end_date_suscription_customer";
+	public static final String SUSCRIPTION_MENU_QUERY = "suscriptionMenuQuery";
 
 }
 

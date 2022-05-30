@@ -17,7 +17,7 @@
   "ERROR_USER_PASS_INCORRECT": "Usuario o contraseña incorrecta",
   "REMEMBER_ME": "Recuérdame",
   "FORGOT_PWD": "¿Has olvidado tu contraseña?",
-  "FOOTER_CREATED_BY": "Creado por Imatia Innovation",
+  "FOOTER_CREATED_BY": "Creado por TupperEats",
   "FOOTER_RIGHTS": "Todos los derechos reservados",
   "PLATES": "Platos",
   "MENUS": "Menús",
@@ -38,7 +38,7 @@
   "second_plate_name": "Segundo Plato",
   "dessert_name": "Postre",
   "dessert": "Postre",
-  "USERS": "Usuarios",
+  "USERS": "Planificadores",
   "user_": "Nombre de Usuario",
   "surname": "Apellidos",
   "email": "Email",
@@ -60,6 +60,8 @@
   "id_customer":"Id cliente",
   "id_suscription":"Id suscripción",
   "suscription_name":"Tipo de Suscripción",
+  "suscription_price":"Precio Suscripción",
   "start_date_suscription_customer":"Inicio suscripción",
-  "end_date_suscription_customer":"Fin suscripción"
+  "end_date_suscription_customer":"Fin suscripción",
+  "date_menu_customer":"Fecha menú"
 }

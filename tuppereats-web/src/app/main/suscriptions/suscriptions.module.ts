@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { SuscriptionsRoutingModule } from './suscriptions-routing.module';
 import { OntimizeWebModule } from 'ontimize-web-ngx';
 import { SuscriptionsHomeComponent } from './suscriptions-home/suscriptions-home.component';
+import { SuscriptionsDetailComponent } from './suscriptions-detail/suscriptions-detail.component';
 
 
 @NgModule({
-  declarations: [SuscriptionsHomeComponent],
+  declarations: [SuscriptionsHomeComponent, SuscriptionsDetailComponent],
   imports: [
     CommonModule,
     OntimizeWebModule,

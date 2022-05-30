@@ -1,15 +1,18 @@
 package com.ontimize.tuppereats.api.core.service;
 
-import com.ontimize.jee.common.dto.EntityResult;
-import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
-
 import java.util.List;
 import java.util.Map;
+
+import com.ontimize.jee.common.dto.EntityResult;
+import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
 
 public interface ISuscriptionCustomerService {
 
     public EntityResult suscriptionCustomerQuery(Map<String, Object> keyMap, List<String> attrList)
             throws OntimizeJEERuntimeException;
+
+	public EntityResult suscriptionMenuQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException;
 
     public EntityResult suscriptionCustomerInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
 

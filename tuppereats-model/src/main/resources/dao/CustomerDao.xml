@@ -11,4 +11,34 @@
     <UpdateKeys>
         <Column>customer_id</Column>
     </UpdateKeys>
+    <Queries>
+		<Query id="customer_suscriptionQuery">
+			
+			<Sentence>
+			   <![CDATA[
+			     SELECT
+			      #COLUMNS#
+			     FROM
+			   	customer c JOIN suscription_customer sc ON c.customer_id = sc.id_customer 
+				JOIN suscription s on sc.id_suscription = s.suscription_id
+				#WHERE#
+			   ]]>
+		</Sentence>
+		</Query>
+		
+		<Query id="customer_menuQuery">
+			
+			<Sentence>
+			   <![CDATA[
+			     SELECT
+			      #COLUMNS#
+			     FROM
+			      customer c JOIN menu_customer mc ON c.customer_id = mc.id_customer 
+			      JOIN menu m ON mc.id_menu = m.menu_id
+				#WHERE#
+			   ]]>
+		</Sentence>
+		</Query>
+	</Queries>
+	
 </JdbcEntitySetup>

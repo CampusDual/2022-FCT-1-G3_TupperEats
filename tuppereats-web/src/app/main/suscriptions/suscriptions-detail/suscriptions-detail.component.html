@@ -1,0 +1,23 @@
+<o-form service="suscriptionCustomers" entity="suscriptionCustomer" keys="suscription_customer_id"  show-header-navigation="no">
+  <o-text-input attr="suscription_customer_id" sql-type="INTEGER" enabled="no"></o-text-input>
+
+
+  <o-row>
+    <o-text-input attr="customer_name" required="yes"></o-text-input>
+    <o-text-input  class="users-margin" attr="customer_surname" required="yes" fxFlex="33"></o-text-input>
+  </o-row>
+
+  <o-row>
+    <o-text-input  attr="suscription_name" required="yes" fxFlex="33"></o-text-input>
+    <o-currency-input  class="users-margin" attr="suscription_price" required="yes" ></o-currency-input>
+    <o-date-input  class="users-margin" attr="start_date_suscription_customer" ></o-date-input>
+    <o-date-input  class="users-margin" attr="end_date_suscription_customer"></o-date-input>
+  </o-row>
+
+  <o-table class="o-table-column-centered" fxFlex="50" attr="suscription_menu" service="suscriptionCustomers" entity="suscriptionMenu"
+      parent-keys="suscription_customer_id" keys="suscription_customer_id"
+      columns="id_customer_suscription;suscription_customer_id;menu_id;first_plate;second_plate;dessert;menu_name;first_plate_name;second_plate_name;dessert_name"
+      visible-columns="menu_name;first_plate_name;second_plate_name;dessert_name" query-rows="10" detail-mode="none">
+    </o-table>
+
+</o-form>

@@ -1,4 +1,4 @@
-<o-form-layout-manager title="{{'CUSTOMERS' | oTranslate }}" separator=" " mode="tab" label-columns="customer_name">
+<o-form-layout-manager title="{{'CUSTOMERS' | oTranslate }}" separator=" " mode="tab" label-columns="customer_name;customer_surname">
   <div fxFill fxLayout="column" fxLayoutAlign="start">
 
     <o-table class="o-table-column-centered" attr="customersable" service="customers" entity="customer" keys="customer_id"
@@ -6,6 +6,7 @@
       visible-columns="customer_name;customer_surname;customer_adress;customer_email;customer_phone;customer_city"
       query-rows="20" select-all-checkbox-visible = "yes" detail-mode= "dblclick">
     </o-table>
+
   </div>
 </o-form-layout-manager>
 
