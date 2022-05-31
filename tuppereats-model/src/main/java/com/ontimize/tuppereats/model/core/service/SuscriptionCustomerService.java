@@ -21,6 +21,7 @@ public class SuscriptionCustomerService implements ISuscriptionCustomerService {
     private SuscriptionCustomerDao suscriptionCustomerDao;
     @Autowired
     private DefaultOntimizeDaoHelper daoHelper;
+
     @Override
     public EntityResult suscriptionCustomerQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
         return this.daoHelper.query(this.suscriptionCustomerDao, keyMap, attrList);
@@ -31,6 +32,13 @@ public class SuscriptionCustomerService implements ISuscriptionCustomerService {
 			throws OntimizeJEERuntimeException {
 		return this.daoHelper.query(this.suscriptionCustomerDao, keyMap, attrList,
 				SuscriptionCustomerDao.SUSCRIPTION_MENU_QUERY);
+	}
+
+	@Override
+	public EntityResult endDateSuscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.suscriptionCustomerDao, keyMap, attrList,
+				SuscriptionCustomerDao.END_DATE_SUSCRIPTION);
 	}
 
     @Override

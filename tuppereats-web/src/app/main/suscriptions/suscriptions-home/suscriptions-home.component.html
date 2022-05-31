@@ -1,6 +1,31 @@
-<o-form-layout-manager title="{{'SUSCRIPTIONS' | oTranslate }}" separator=" " mode="tab" label-columns="customer_name;customer_surname">
+<o-form show-header-navigation="no">
+
+  <o-column-collapsible title="{{ 'FILTERS_SUSCRIPTIONS' | oTranslate }}" appearance="outline">
+    <o-row layout-gap="18px">
+       <o-column fxFlex="50" title="{{ 'STARTDATE' | oTranslate }}">
+          <o-date-input attr="startInit" label="INIT" read-only="no" required="no"></o-date-input>
+          <o-date-input attr="endInit" label="END" read-only="no" required="no"></o-date-input>
+       </o-column>
+       <o-column fxFlex="50" title="{{ 'ENDDATE' | oTranslate }}">
+          <o-date-input attr="startEnd" label="INIT" read-only="no" required="no"></o-date-input>
+          <o-date-input attr="endEnd" label="END" read-only="no" required="no"></o-date-input>
+       </o-column>
+    </o-row>
+    <o-row layout-align="end" layout-gap="18px">
+       <o-button attr="filter" [oFilterBuilderQuery]="filterBuilder" type="RAISED" label="FILTER">
+       </o-button>
+       <o-button attr="clear" [oFilterBuilderClear]="filterBuilder" type="RAISED" label="CLEAR">
+       </o-button>
+    </o-row>
+ </o-column-collapsible>
+
+ <o-filter-builder #filterBuilder attr="filter_suscription"
+    filters="STARTDATE_I:startInit;STARTDATE_E:endInit;ENDDATE_I:startEnd;ENDDATE_E:endEnd" [target]="suscription_customer"
+    query-on-change="no" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
+
+
   <div fxFill fxLayout="column" fxLayoutAlign="start">
-    <o-table  class="o-table-column-centered" attr="suscription_customer" service="suscriptionCustomers" entity="suscriptionCustomer" keys="suscription_customer_id"
+    <o-table #suscription_customer class="o-table-column-centered" attr="suscription_customer" service="suscriptionCustomers" entity="suscriptionCustomer" keys="suscription_customer_id"
       columns="suscription_customer_id;id_customer;id_suscription;start_date_suscription_customer;end_date_suscription_customer;customer_name;customer_surname;suscription_name"
       visible-columns="customer_name;customer_surname;suscription_name;start_date_suscription_customer;end_date_suscription_customer"
       query-rows="20" select-all-checkbox-visible = "yes" detail-mode= "dblclick">
@@ -8,4 +33,5 @@
       <o-table-column attr="end_date_suscription_customer" type="date" format="LL"></o-table-column>
     </o-table>
   </div>
-</o-form-layout-manager>
+
+</o-form>
