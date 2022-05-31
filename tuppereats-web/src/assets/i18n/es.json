@@ -63,5 +63,12 @@
   "suscription_price":"Precio Suscripción",
   "start_date_suscription_customer":"Inicio suscripción",
   "end_date_suscription_customer":"Fin suscripción",
-  "date_menu_customer":"Fecha menú"
+  "date_menu_customer":"Fecha menú",
+  "FILTERS_SUSCRIPTIONS": "Filtro Suscripción",
+  "INIT": "Inicio",
+  "END": "Fin",
+  "FILTER": "Filtrar",
+  "CLEAR": "Limpiar",
+  "STARTDATE":"Inicio Suscripción",
+  "ENDDATE":"Fin Suscripción"
 }

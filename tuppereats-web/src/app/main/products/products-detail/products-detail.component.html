@@ -1,4 +1,4 @@
-<o-form service="products" entity="product" keys="product_id" header-actions="R;I;U;D" show-header-navigation="no">
+<o-form service="products" entity="product" keys="product_id" header-actions="R;U;D" show-header-navigation="no">
   <o-text-input attr="product_id" sql-type="INTEGER" enabled="no"></o-text-input>
 
   <o-text-input attr="name" required="yes"></o-text-input>
@@ -9,9 +9,9 @@
   </o-combo>
 
   <o-row>
-    <o-image id="product_photo" attr="photo" empty-image="assets/images/no-image.png" sql-type="other" width="100px"
+    <o-image show-controls="no" id="product_photo" attr="photo" empty-image="assets/images/no-image.png" sql-type="other" width="100px"
       fxFlex="40"></o-image>
-    <o-textarea-input class="input-margin" attr="ingredients" fxflex="60" rows="20" required="yes">
+    <o-textarea-input class="input-margin textarea-style" attr="ingredients" fxflex="60" rows="10" required="yes">
     </o-textarea-input>
   </o-row>
 </o-form>

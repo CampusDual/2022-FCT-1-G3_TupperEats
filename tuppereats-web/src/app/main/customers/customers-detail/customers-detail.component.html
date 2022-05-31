@@ -1,4 +1,4 @@
-<o-form service="customers" entity="customer" keys="customer_id" show-header-navigation="no">
+<o-form service="customers" entity="customer" keys="customer_id" editable-detail="no" show-header="no">
   <o-text-input attr="customer_id" sql-type="INTEGER" enabled="no"></o-text-input>
 
   <o-row>
@@ -17,7 +17,7 @@
   </o-row>
 
   <o-row>
-    <o-table class="o-table-column-centered" fxFlex="50" attr="suscription_customer" service="customers" entity="customer_suscription"
+    <o-table delete-button="no" class="o-table-column-centered" fxFlex="50" attr="suscription_customer" service="customers" entity="customer_suscription"
       parent-keys="customer_id" keys="customer_id" columns="customer_id;suscription_customer_id;suscription_name;suscription_price;suscription_id;start_date_suscription_customer;end_date_suscription_customer"
       visible-columns="suscription_name;start_date_suscription_customer;end_date_suscription_customer;suscription_price" query-rows="10" detail-mode="none">
       <o-table-column attr="start_date_suscription_customer" type="date" format="LL" ></o-table-column>
@@ -26,7 +26,7 @@
       thousand-separator="." decimal-separator="," ></o-table-column>
     </o-table>
 
-    <o-table class="o-table-column-centered" fxFlex="50" attr="menu_customer" service="customers" entity="customer_menu"
+    <o-table delete-button="no" class="o-table-column-centered" fxFlex="50" attr="menu_customer" service="customers" entity="customer_menu"
       parent-keys="customer_id" keys="customer_id" columns="customer_id;menu_customer_id;menu_id;menu_name;date_menu_customer"
       visible-columns="menu_name;date_menu_customer" query-rows="10" detail-mode="none">
       <o-table-column attr="date_menu_customer" type="date" format="LL" ></o-table-column>
