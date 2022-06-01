@@ -40,7 +40,7 @@ public class PermissionRestController extends ORestController<IPermissionService
 		
 	}*/
 	
-	@RequestMapping(value="/permission",method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/permissionRoles",method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public String permission(){
 		if(permissionService.permissionQuery(null, null).getRecordValues(0).get("profile").equals("admin")) {
 			String a = "{\"menu\": [{ \"attr\": \"home\", \"visible\": true, \"enabled\": true },{ \"attr\": \"plates\", \"visible\": true, \"enabled\": true },{ \"attr\": \"menus\", \"visible\": true, \"enabled\": true },{ \"attr\": \"users\", \"visible\": true, \"enabled\": true },{ \"attr\": \"customers\", \"visible\": true, \"enabled\": true },{ \"attr\": \"suscriptions\", \"visible\": true, \"enabled\": true },{ \"attr\": \"logout\", \"visible\": true, \"enabled\": true }]}";
