@@ -11,4 +11,17 @@
     <UpdateKeys>
         <Column>id_server_permission</Column>
     </UpdateKeys>
+    <Queries>
+		<Query id="default">
+			<Sentence>
+			   <![CDATA[
+			     SELECT
+			      id_rolename
+			     FROM
+			      tuser_role
+				#WHERE#
+			   ]]>
+		</Sentence>
+		</Query>
+	</Queries>
 </JdbcEntitySetup>

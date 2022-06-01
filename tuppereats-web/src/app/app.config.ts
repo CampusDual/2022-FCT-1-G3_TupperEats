@@ -27,6 +27,12 @@ export const CONFIG: Config = {
   // Configuration parameters of application services.
   servicesConfiguration: SERVICE_CONFIG,
 
+  permissionsConfiguration:{
+    service: 'permissions'
+  },
+
+  permissionsServiceType:  'OntimizeEEPermissions',
+
   appMenuConfiguration: MENU_CONFIG,
 
   applicationLocales: ['es', 'en']
