@@ -25,7 +25,7 @@
 
 
   <div fxFill fxLayout="column" fxLayoutAlign="start">
-    <o-table #suscription_customer delete-button="no" class="o-table-column-centered" attr="suscription_customer" service="suscriptionCustomers" entity="suscriptionCustomer" keys="suscription_customer_id"
+    <o-table #suscription_customer insert-button="no" delete-button="no" class="o-table-column-centered" attr="suscription_customer" service="suscriptionCustomers" entity="suscriptionCustomer" keys="suscription_customer_id"
       columns="suscription_customer_id;id_customer;id_suscription;start_date_suscription_customer;end_date_suscription_customer;customer_name;customer_surname;suscription_name"
       visible-columns="customer_name;customer_surname;suscription_name;start_date_suscription_customer;end_date_suscription_customer"
       query-rows="20" detail-mode= "dblclick">
