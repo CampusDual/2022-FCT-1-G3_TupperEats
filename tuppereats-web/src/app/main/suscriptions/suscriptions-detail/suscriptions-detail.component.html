@@ -1,15 +1,14 @@
 <o-form service="suscriptionCustomers" entity="suscriptionCustomer" keys="suscription_customer_id" editable-detail="no" >
   <o-text-input attr="suscription_customer_id" sql-type="INTEGER" enabled="no"></o-text-input>
 
-
   <o-row>
-    <o-text-input attr="customer_name" required="yes"></o-text-input>
-    <o-text-input  class="users-margin" attr="customer_surname" required="yes" fxFlex="33"></o-text-input>
+    <o-text-input attr="customer_name"></o-text-input>
+    <o-text-input  class="users-margin" attr="customer_surname" fxFlex="33"></o-text-input>
   </o-row>
 
   <o-row>
-    <o-text-input read-only="yes" attr="suscription_name" required="yes" fxFlex="33"></o-text-input>
-    <o-currency-input read-only="yes" class="users-margin" attr="suscription_price" required="yes" ></o-currency-input>
+    <o-text-input read-only="yes" attr="suscription_name" fxFlex="33"></o-text-input>
+    <o-currency-input read-only="yes" class="users-margin" attr="suscription_price"></o-currency-input>
     <o-date-input read-only="yes" class="users-margin" attr="start_date_suscription_customer" ></o-date-input>
     <o-date-input read-only="yes" class="users-margin" attr="end_date_suscription_customer"></o-date-input>
   </o-row>

@@ -1,20 +1,22 @@
 <o-form service="menus" entity="menu" keys="menu_id" header-actions="R;I;U;D" show-header-navigation="no">
   <o-text-input attr="menu_id" sql-type="INTEGER" enabled="no"></o-text-input>
 
-  <o-text-input attr="menu_name" required="yes"></o-text-input>
-  <o-real-input attr="price"></o-real-input>
+  <o-row>
+    <o-text-input attr="menu_name" required="yes" fxFlex="40"></o-text-input>
+    <o-currency-input class="input-margin-menus"  attr="price" fxFlex="10"></o-currency-input>
+  </o-row>
+          <o-combo #firstPlate fxFlex="52" attr="first_plate" label="first_plate"
+          service="products" entity="plateType" value-column="product_id"
+          columns="product_id;name" visible-columns="name" keys="product_id">
+          </o-combo>
 
-  <!-- combos  -->
-  <o-combo #firstPlate attr="first_plate" label="first_plate"
-  service="products" entity="plateType" value-column="product_id"
-  columns="product_id;name" visible-columns="name" keys="product_id">
-  </o-combo>
-  <o-combo #secondPlate attr="second_plate" label="second_plate"
-  service="products" entity="plateType" value-column="product_id"
-  columns="product_id;name" visible-columns="name" keys="product_id">
-  </o-combo>
-  <o-combo #dessert attr="dessert" label="dessert"
-  service="products" entity="dessertType" value-column="product_id"
-  columns="product_id;name" visible-columns="name" keys="product_id">
-  </o-combo>
+          <o-combo #secondPlate fxFlex="52" attr="second_plate" label="second_plate"
+          service="products" entity="plateType" value-column="product_id"
+          columns="product_id;name" visible-columns="name" keys="product_id">
+          </o-combo>
+
+          <o-combo #dessert fxFlex="52" attr="dessert"
+          service="products" entity="dessertType" value-column="product_id"
+          columns="product_id;name" visible-columns="name" keys="product_id">
+          </o-combo>
 </o-form>
