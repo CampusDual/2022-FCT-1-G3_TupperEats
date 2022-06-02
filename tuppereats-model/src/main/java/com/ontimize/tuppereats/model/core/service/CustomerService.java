@@ -30,13 +30,13 @@ public class CustomerService implements ICustomerService{
 	}
 
 	@Override
-	public EntityResult customer_suscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
+	public EntityResult customerSuscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException {
 		return this.daoHelper.query(this.customerDao, keyMap, attrList, CustomerDao.CUSTOMER_SUSCRIPTION_QUERY);
 	}
 
 	@Override
-	public EntityResult customer_menuQuery(Map<String, Object> keyMap, List<String> attrList)
+	public EntityResult customerMenuQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException {
 		return this.daoHelper.query(this.customerDao, keyMap, attrList, CustomerDao.CUSTOMER_MENU_QUERY);
 	}

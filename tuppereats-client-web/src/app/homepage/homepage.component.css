@@ -2,10 +2,16 @@
   padding-inline: 20px;
   display: flex;
   flex-direction: row;
-  background-color: antiquewhite;
+  background-color: #fabe80;
   border-bottom: 1px solid black;
   position: fixed;
   width: 100%;
+  z-index: 2;
+}
+.nav_logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .nav .nav_logo p{
   font-size: 20px;
@@ -38,6 +44,14 @@
 .main .main_title{
   margin-bottom: 40px;
 }
+.img_pesto{
+  position: absolute;
+  top: 5rem;
+  right: 0rem;
+  z-index: 1;
+  width: 1200px;
+  height: 850px;
+}
 .main .main_sub{
   padding: 40px;
 }
@@ -55,7 +69,7 @@
   line-height: 60px;
 }
 .main_2{
-  margin-top: 8rem;
+  margin-top: 12rem;
   margin-bottom: 2rem;
 }
 .main_2_gallery{
