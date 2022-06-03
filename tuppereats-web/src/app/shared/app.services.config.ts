@@ -16,6 +16,9 @@ export const SERVICE_CONFIG: Object = {
   },
   'suscriptionCustomers': {
     'path': '/suscriptionCustomers'
+  },
+  'permissions':{
+    'path':'/permissions/permission'
   }
 };
 

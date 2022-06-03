@@ -13,10 +13,10 @@ public interface ICustomerService {
 		public EntityResult customerQuery(Map<String, Object> keyMap, List<String> attrList)
 				throws OntimizeJEERuntimeException;
 
-		public EntityResult customer_suscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
+		public EntityResult customerSuscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
 				throws OntimizeJEERuntimeException;
 
-		public EntityResult customer_menuQuery(Map<String, Object> keyMap, List<String> attrList)
+		public EntityResult customerMenuQuery(Map<String, Object> keyMap, List<String> attrList)
 				throws OntimizeJEERuntimeException;
 
 		public EntityResult customerInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
