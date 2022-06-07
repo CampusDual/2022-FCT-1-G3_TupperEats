@@ -18,18 +18,18 @@
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: center;
     overflow: auto;
 
-    .login-bg-container {
-      background-image: url('^assets/images/login_bg.png');
-      width: calc(100% - 640px);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      z-index: 1;
-    }
+    // .login-bg-container {
+    //   background-image: url('^assets/images/login_bg.png');
+    //   width: calc(100% - 640px);
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   background-position: center;
+    //   position: relative;
+    //   z-index: 1;
+    // }
 
     .login-bg-container::before {
       content: "";
@@ -47,6 +47,14 @@
     .wrapp-login {
       width: 640px;
       min-height: 100%;
+      margin: auto;
+
+      img{
+        width: 300;
+        height: 300;
+        margin: auto;
+        display: block;
+      }
 
       .login-inner-container {
         width: 100%;
