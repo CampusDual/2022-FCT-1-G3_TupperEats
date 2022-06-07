@@ -1,9 +1,9 @@
-<o-form-layout-manager title="{{'CUSTOMERS' | oTranslate }}" separator=" " mode="tab" label-columns="customer_name;customer_surname">
+<o-form-layout-manager title="{{'CUSTOMERS' | oTranslate }}" separator=" " mode="tab" label-columns="name;surname">
   <div fxFill fxLayout="column" fxLayoutAlign="start">
 
-    <o-table insert-button="no" delete-button="no" class="o-table-column-centered" attr="customersable" service="customers" entity="customer" keys="customer_id"
-      columns="customer_name;customer_surname;customer_adress;customer_email;customer_phone;customer_city"
-      visible-columns="customer_name;customer_surname;customer_adress;customer_email;customer_phone;customer_city"
+    <o-table insert-button="no" delete-button="no" class="o-table-column-centered" attr="tuser" service="users" entity="customer" keys="user_"
+      columns="user_;name;surname;address;email;phone;city"
+      visible-columns="name;surname;adress;email;phone;city"
       query-rows="20" detail-mode= "dblclick">
     </o-table>
 

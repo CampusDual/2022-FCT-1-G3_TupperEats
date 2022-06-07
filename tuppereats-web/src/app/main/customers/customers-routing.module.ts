@@ -10,7 +10,7 @@ const routes: Routes =  [{
   component: CustomersHomeComponent
 },
 {
-  path: ":customer_id",
+  path: ":user_",
   component: CustomersDetailComponent
 }];
 

@@ -21,8 +21,15 @@ public class UserDao extends OntimizeJdbcDaoSupport {
 	public static final String NAME          = "name";
 	public static final String SURNAME       = "surname";
 	public static final String NIF       	 = "nif";
+	public static final String CITY = "city";
+	public static final String PHONE = "phone";
+	public static final String ADDRESS = "address";
 	public static final String USERBLOCKED 		 	  = "userblocked";
 	public static final String LASTPASSWORDUPDATE     = "lastpasswordupdate";
 	public static final String FIRSTLOGIN 			  = "firstlogin";
+	public static final String USER_SUSCRIPTION_QUERY = "customerSuscriptionQuery";
+	public static final String USER_MENU_QUERY = "customerMenuQuery";
+	public static final String CUSTOMER_QUERY = "customerQuery";
+	public static final String NO_CUSTOMER_QUERY = "noCustomerQuery";
 
 }

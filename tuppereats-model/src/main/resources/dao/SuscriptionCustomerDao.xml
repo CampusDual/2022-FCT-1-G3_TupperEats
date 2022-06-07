@@ -18,8 +18,8 @@
 			     SELECT
 			      #COLUMNS#
 			     FROM
-			      suscription_customer sc JOIN customer c 
-			      	ON sc.id_customer = c.customer_id
+			      suscription_customer sc JOIN tuser u 
+			      	ON sc.user_suscription = u.user_
 					JOIN suscription s 
 					ON sc.id_suscription =s.suscription_id 
 				 #WHERE#

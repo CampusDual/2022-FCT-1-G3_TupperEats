@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.ontimize.jee.common.dto.EntityResult;
 import com.ontimize.jee.common.dto.EntityResultMapImpl;
+import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
 import com.ontimize.jee.common.security.PermissionsProviderSecured;
 import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import com.ontimize.tuppereats.api.core.service.IUserService;
@@ -36,6 +37,30 @@ public class UserService implements IUserService {
 	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult userQuery(Map<?, ?> keyMap, List<?> attrList) {
 		return this.daoHelper.query(userDao, keyMap, attrList);
+	}
+
+	@Override
+	public EntityResult userSuscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.userDao, keyMap, attrList, UserDao.USER_SUSCRIPTION_QUERY);
+	}
+
+	@Override
+	public EntityResult userMenuQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.userDao, keyMap, attrList, UserDao.USER_MENU_QUERY);
+	}
+
+	@Override
+	public EntityResult customerQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.userDao, keyMap, attrList, UserDao.CUSTOMER_QUERY);
+	}
+
+	@Override
+	public EntityResult noCustomerQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.userDao, keyMap, attrList, UserDao.NO_CUSTOMER_QUERY);
 	}
 
 	@Secured({ PermissionsProviderSecured.SECURED })
@@ -80,5 +105,8 @@ public class UserService implements IUserService {
 		return toret;
 
 	}
+
+
+
 
 }
