@@ -27,22 +27,6 @@
 		</Sentence>
 		</Query>
 		
-		<Query id="endDateSuscription">
-			<Sentence>
-			   <![CDATA[
-			     SELECT
-			      #COLUMNS#
-			     FROM
-			      suscription_customer sc JOIN customer c 
-			      	ON sc.id_customer = c.customer_id
-					JOIN suscription s 
-					ON sc.id_suscription =s.suscription_id 
-				  WHERE
-				  current_date <= end_date_suscription_customer
-			   ]]>
-		</Sentence>
-		</Query>
-		
 		<Query id="suscriptionMenuQuery">
 		<AmbiguousColumns>
                 <AmbiguousColumn name="first_plate" prefix="pp"
@@ -57,10 +41,6 @@
                     databaseName="name" />
                 <AmbiguousColumn name="dessert_name" prefix="po"
                     databaseName="name" />
-                <AmbiguousColumn name="id_customer_suscription" prefix="sc"
-                    databaseName="id_customer" />
-                <AmbiguousColumn name="id_customer_menu" prefix="mc"
-                    databaseName="id_customer" />
             </AmbiguousColumns>
 			<Sentence>
 			   <![CDATA[

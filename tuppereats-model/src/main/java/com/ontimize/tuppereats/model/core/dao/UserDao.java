@@ -27,8 +27,8 @@ public class UserDao extends OntimizeJdbcDaoSupport {
 	public static final String USERBLOCKED 		 	  = "userblocked";
 	public static final String LASTPASSWORDUPDATE     = "lastpasswordupdate";
 	public static final String FIRSTLOGIN 			  = "firstlogin";
-	public static final String USER_SUSCRIPTION_QUERY = "customerSuscriptionQuery";
-	public static final String USER_MENU_QUERY = "customerMenuQuery";
+	public static final String USER_SUSCRIPTION_QUERY = "userSuscriptionQuery";
+	public static final String USER_MENU_QUERY = "userMenuQuery";
 	public static final String CUSTOMER_QUERY = "customerQuery";
 	public static final String NO_CUSTOMER_QUERY = "noCustomerQuery";
 

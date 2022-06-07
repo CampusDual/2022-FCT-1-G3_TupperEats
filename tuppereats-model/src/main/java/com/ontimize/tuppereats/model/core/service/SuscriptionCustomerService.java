@@ -37,13 +37,6 @@ public class SuscriptionCustomerService implements ISuscriptionCustomerService {
 				SuscriptionCustomerDao.SUSCRIPTION_MENU_QUERY);
 	}
 
-	@Override
-	public EntityResult endDateSuscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
-			throws OntimizeJEERuntimeException {
-		return this.daoHelper.query(this.suscriptionCustomerDao, keyMap, attrList,
-				SuscriptionCustomerDao.END_DATE_SUSCRIPTION);
-	}
-
     @Override
 	@Secured({ PermissionsProviderSecured.SECURED })
     public EntityResult suscriptionCustomerInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
