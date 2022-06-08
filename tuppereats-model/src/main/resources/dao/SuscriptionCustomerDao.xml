@@ -31,11 +31,12 @@
 			<Sentence>
 			   <![CDATA[
 			     SELECT 
-			      count(id_suscription) as cuenta, id_suscription 
+			      count(sc.id_suscription) as cuenta_suscription, sc.id_suscription , s.suscription_name
 				 FROM 
-				  suscription_customer 
+				  suscription_customer sc
+				  join suscription s on sc.id_suscription = s.suscription_id
 				 GROUP BY
-				  id_suscription 
+				  sc.id_suscription, s.suscription_name
 				 #WHERE#
 			   ]]>
 			</Sentence>

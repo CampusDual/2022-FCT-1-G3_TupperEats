@@ -1,13 +1,19 @@
 <div fxLayout="row" layout-padding fxLayoutAlign="center center">
-  <o-chart fxFlex type="pie" service="suscriptionCustomers" entity="graficaSuscription"
+
+  <!-- <o-chart fxFlex type="pie" service="suscriptionCustomers" entity="graficaSuscription"
            keys="suscription_customer_id" x-axis="id_suscription"
-           y-axis="cuenta" query-on-init="no" [chart-parameters]="movementTypesChartParams"
-           class="movements-chart"
+           y-axis="cuenta" [chart-parameters]="movementTypesChartParams"
+  >
+  </o-chart> -->
+
+  <o-chart fxFlex="20" type="pie" service="suscriptionCustomers" entity="graficaSuscription"
+           keys="suscription_customer_id" x-axis="suscription_name"
+           y-axis="cuenta_suscription" [chart-parameters]="movementTypesChartParams"
   >
   </o-chart>
 
-  <!--<o-table   attr="suscription_menu" service="suscriptionCustomers" entity="graficaSuscription" keys="suscription_customer_id"
+  <!-- <o-table   attr="suscription_menu" service="suscriptionCustomers" entity="graficaSuscription" keys="suscription_customer_id"
       columns="id_suscription;cuenta"
       visible-columns="id_suscription;cuenta" query-rows="5" detail-mode="none">
-    </o-table>-->
+    </o-table> -->
 </div>
