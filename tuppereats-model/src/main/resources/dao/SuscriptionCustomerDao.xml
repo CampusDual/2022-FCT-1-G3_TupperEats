@@ -41,25 +41,6 @@
 			</Sentence>
 		</Query>
 		
-<<<<<<< HEAD
-=======
-		<Query id="endDateSuscription">
-			<Sentence>
-			   <![CDATA[
-			     SELECT
-			      #COLUMNS#
-			     FROM
-			      suscription_customer sc JOIN customer c 
-			      	ON sc.id_customer = c.customer_id
-					JOIN suscription s 
-					ON sc.id_suscription =s.suscription_id 
-				  WHERE
-				  current_date <= end_date_suscription_customer
-			   ]]>
-			</Sentence>
-		</Query>
-		
->>>>>>> Graphics
 		<Query id="suscriptionMenuQuery">
 		<AmbiguousColumns>
                 <AmbiguousColumn name="first_plate" prefix="pp"
