@@ -28,5 +28,8 @@ public interface IMasterProductService {
 			throws OntimizeJEERuntimeException;
 
 	public EntityResult typeDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+	
+	
 }
+
 

@@ -22,10 +22,22 @@
 			      product p
 			      left join product_category pc on p.product_category_id = pc.id_product_category
 			
-			
 			      left join product_type pt on p.id_product_type = pt.product_type_id
 			
 				#WHERE#
+			   ]]>
+		</Sentence>
+		</Query>
+		
+		<Query id="allergicProduct">
+			<Sentence>
+			   <![CDATA[
+			     SELECT
+			     #COLUMNS#
+				 FROM product p
+				 join product_allergic pa on p.id_product = pa.id_product 
+				 join allergic a on pa.id_allergic = a.allergic_id 
+				 #WHERE#
 			   ]]>
 		</Sentence>
 		</Query>

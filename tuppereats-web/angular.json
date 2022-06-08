@@ -32,7 +32,8 @@
             "styles": [
               "node_modules/ontimize-web-ngx/ontimize.scss",
               "src/assets/css/app.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ontimize-web-ngx-charts/styles.scss"
             ],
             "scripts": [
               "src/assets/js/domchange.js",

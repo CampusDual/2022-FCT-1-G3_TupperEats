@@ -24,7 +24,21 @@
 					ON sc.id_suscription =s.suscription_id 
 				 #WHERE#
 			   ]]>
-		</Sentence>
+			</Sentence>
+		</Query>
+		
+		<Query id="graficaSuscription">
+			<Sentence>
+			   <![CDATA[
+			     SELECT 
+			      count(id_suscription) as cuenta, id_suscription 
+				 FROM 
+				  suscription_customer 
+				 GROUP BY
+				  id_suscription 
+				 #WHERE#
+			   ]]>
+			</Sentence>
 		</Query>
 		
 		<Query id="endDateSuscription">
@@ -40,7 +54,7 @@
 				  WHERE
 				  current_date <= end_date_suscription_customer
 			   ]]>
-		</Sentence>
+			</Sentence>
 		</Query>
 		
 		<Query id="suscriptionMenuQuery">
@@ -75,7 +89,7 @@
 				JOIN product po ON m.dessert = po.product_id
 				#WHERE#
 			   ]]>
-		</Sentence>
+			</Sentence>
 		</Query>
 	</Queries>
 </JdbcEntitySetup>

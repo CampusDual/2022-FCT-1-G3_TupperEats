@@ -25,7 +25,6 @@ public class PermissionService implements IPermissionService {
 	public EntityResult permissionQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-
 		EntityResult e = new EntityResultMapImpl();
 		Map<String, String> map = new HashMap<>();
 		String role = authentication.getAuthorities().toArray()[0].toString();
@@ -34,6 +33,5 @@ public class PermissionService implements IPermissionService {
 		}
 		e.addRecord(map);
 		return e;
-
 	}
 }

@@ -61,4 +61,10 @@ public class ProductService implements IProductService {
 	public EntityResult productDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
 		return this.daoHelper.delete(this.productDao, keyMap);
 	}
+
+	@Override
+	public EntityResult allergicProductQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(productDao, keyMap, attrList, ProductDao.QUERY_ALLERGIC);
+	}
 }

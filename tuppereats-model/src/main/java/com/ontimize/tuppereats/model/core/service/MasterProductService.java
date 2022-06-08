@@ -11,6 +11,7 @@ import com.ontimize.jee.common.dto.EntityResult;
 import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
 import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import com.ontimize.tuppereats.api.core.service.IMasterProductService;
+import com.ontimize.tuppereats.model.core.dao.ProductAllergicDao;
 import com.ontimize.tuppereats.model.core.dao.ProductCategoryDao;
 import com.ontimize.tuppereats.model.core.dao.ProductTypeDao;
 
@@ -24,6 +25,8 @@ public class MasterProductService implements IMasterProductService {
 	private ProductTypeDao productTypeDao;
 	@Autowired
 	private DefaultOntimizeDaoHelper daoHelper;
+	@Autowired
+	private ProductAllergicDao productAllergicDao ;
 
 	// PRODUCT CATEGORY
 	@Override
@@ -70,4 +73,6 @@ public class MasterProductService implements IMasterProductService {
 	public EntityResult typeDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
 		return this.daoHelper.delete(this.productTypeDao, keyMap);
 	}
+	
+	
 }
