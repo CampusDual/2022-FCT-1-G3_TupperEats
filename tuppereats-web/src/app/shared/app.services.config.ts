@@ -16,6 +16,9 @@ export const SERVICE_CONFIG: Object = {
   },
   'permissions':{
     'path':'/permissions/permission'
+  },
+  'productAllergics':{
+    'path':'/productAllergics'
   }
 };
 

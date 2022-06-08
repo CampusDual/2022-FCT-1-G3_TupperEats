@@ -26,7 +26,8 @@
 			      
 			      left join product_allergic pa on p.product_id = pa.id_product
 			      
-			
+			      left join allergic a on pa.id_allergic = a.allergic_id 
+			      
 				#WHERE#
 			   ]]>
 		</Sentence>
