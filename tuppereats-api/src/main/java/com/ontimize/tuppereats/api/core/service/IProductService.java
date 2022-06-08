@@ -17,6 +17,9 @@ public interface IProductService {
 
 	public EntityResult dessertTypeQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException;
+	
+	public EntityResult allergicProductQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException;
 
 	public EntityResult productInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
 

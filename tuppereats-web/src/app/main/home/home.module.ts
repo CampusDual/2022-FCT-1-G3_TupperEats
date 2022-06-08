@@ -10,6 +10,7 @@ import { HomeComponent } from './home.component';
     SharedModule,
     OntimizeWebModule,
     HomeRoutingModule
+
   ],
   declarations: [
     HomeComponent

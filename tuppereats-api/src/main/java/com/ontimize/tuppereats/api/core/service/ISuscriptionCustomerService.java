@@ -14,6 +14,15 @@ public interface ISuscriptionCustomerService {
 	public EntityResult suscriptionMenuQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException;
 
+<<<<<<< HEAD
+=======
+	public EntityResult endDateSuscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException;
+	
+	public EntityResult graficaSuscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException;
+
+>>>>>>> Graphics
     public EntityResult suscriptionCustomerInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
 
     public EntityResult suscriptionCustomerUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)

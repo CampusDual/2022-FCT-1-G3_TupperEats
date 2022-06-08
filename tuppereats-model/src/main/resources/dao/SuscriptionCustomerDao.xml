@@ -24,9 +24,42 @@
 					ON sc.id_suscription =s.suscription_id 
 				 #WHERE#
 			   ]]>
-		</Sentence>
+			</Sentence>
 		</Query>
 		
+		<Query id="graficaSuscription">
+			<Sentence>
+			   <![CDATA[
+			     SELECT 
+			      count(id_suscription) as cuenta, id_suscription 
+				 FROM 
+				  suscription_customer 
+				 GROUP BY
+				  id_suscription 
+				 #WHERE#
+			   ]]>
+			</Sentence>
+		</Query>
+		
+<<<<<<< HEAD
+=======
+		<Query id="endDateSuscription">
+			<Sentence>
+			   <![CDATA[
+			     SELECT
+			      #COLUMNS#
+			     FROM
+			      suscription_customer sc JOIN customer c 
+			      	ON sc.id_customer = c.customer_id
+					JOIN suscription s 
+					ON sc.id_suscription =s.suscription_id 
+				  WHERE
+				  current_date <= end_date_suscription_customer
+			   ]]>
+			</Sentence>
+		</Query>
+		
+>>>>>>> Graphics
 		<Query id="suscriptionMenuQuery">
 		<AmbiguousColumns>
                 <AmbiguousColumn name="first_plate" prefix="pp"
@@ -55,7 +88,7 @@
 				JOIN product po ON m.dessert = po.product_id
 				#WHERE#
 			   ]]>
-		</Sentence>
+			</Sentence>
 		</Query>
 	</Queries>
 </JdbcEntitySetup>

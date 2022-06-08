@@ -14,5 +14,19 @@
     <o-textarea-input class="input-margin textarea-style" attr="ingredients" fxflex="60" rows="10" required="yes">
     </o-textarea-input>
   </o-row>
+
+  <o-text-input
+   attr="product_allergic_id"
+          service="products" entity="allergicProduct" value-column="id_allergic"
+          columns="id_allergic;product_allergic_id;allergic_name;allergic_id" visible-columns="allergic_name" keys="product_allergic_id"
+          parent-keys="product_id"
+          >
+    </o-text-input>
+
+
 </o-form>
+
+
+
+
 

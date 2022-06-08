@@ -1,5 +1,12 @@
 <div fxLayout="row" layout-padding fxLayoutAlign="center center">
-  <p>
-    Ontimize web seed application home component
-  </p>
+    <o-chart fxFlex type="pie" service="suscriptionCustomers" entity="graficaSuscription" parent-keys="suscription_customer_id" x-axis="id_suscription"
+      y-axis="cuenta" query-on-init="no" [chart-parameters]="movementTypesChartParams" class="movements-chart">
+    </o-chart>
+
+      <o-table refresh-button="no" insert-button="no" delete-button="no" class="o-table-column-centered" fxFlex="50" attr="suscription_menu" service="suscriptionCustomers" entity="graficaSuscription"
+      parent-keys="id_suscription" keys="suscription_customer_id"
+      columns="id_suscription;cuenta"
+      visible-columns="id_suscription;cuenta" query-rows="5" detail-mode="none">
+    </o-table>
+
 </div>

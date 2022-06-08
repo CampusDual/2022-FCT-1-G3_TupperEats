@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JdbcEntitySetup
+        xmlns="http://www.ontimize.com/schema/jdbc"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.ontimize.com/schema/jdbc http://www.ontimize.com/schema/jdbc/ontimize-jdbc-dao.xsd"
+        catalog="" schema="${mainschema}" table="product_allergic"
+        datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
+    <DeleteKeys>
+        <Column>product_allergic_id</Column>
+    </DeleteKeys>
+    <UpdateKeys>
+        <Column>product_allergic_id</Column>
+    </UpdateKeys>
+    
+    <Queries>
+     <Query id="default">
+			<Sentence>
+			   <![CDATA[
+			     SELECT
+			     #COLUMNS#
+				 FROM product p
+				 join product_allergic pa on p.product_id = pa.id_product 
+				 join allergic a on pa.id_allergic = a.allergic_id 
+				 #WHERE#
+			   ]]>
+		</Sentence>
+		</Query>
+    </Queries>
+   
+</JdbcEntitySetup>
