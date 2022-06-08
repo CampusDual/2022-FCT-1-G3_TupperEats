@@ -15,11 +15,14 @@
     </o-textarea-input>
   </o-row>
 
-  <o-combo
-          service="products" entity="allergicProduct" value-column="product_id"
-          columns="product_id;product_allergic_id;allergic_name;allergic_id" visible-columns="allergic_name" keys="product_id"
+  <o-text-input
+   attr="product_allergic_id"
+          service="products" entity="allergicProduct" value-column="id_allergic"
+          columns="id_allergic;product_allergic_id;allergic_name;allergic_id" visible-columns="allergic_name" keys="product_allergic_id"
+          parent-keys="product_id"
           >
-  </o-combo>
+    </o-text-input>
+
 
 </o-form>
 
