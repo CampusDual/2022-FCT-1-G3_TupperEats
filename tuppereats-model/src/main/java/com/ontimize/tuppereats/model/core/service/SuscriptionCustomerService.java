@@ -43,6 +43,13 @@ public class SuscriptionCustomerService implements ISuscriptionCustomerService {
 		return this.daoHelper.query(this.suscriptionCustomerDao, keyMap, attrList,
 				SuscriptionCustomerDao.GRAFICA_SUSCRIPTION);
 	}
+    @Override
+    public EntityResult graficaProductQuery(Map<String, Object> keyMap, List<String> attrList)
+            throws OntimizeJEERuntimeException {
+        return this.daoHelper.query(this.suscriptionCustomerDao, keyMap, attrList,
+                SuscriptionCustomerDao.GRAFICA_PRODUCT);
+    }
+
 
     @Override
 	@Secured({ PermissionsProviderSecured.SECURED })

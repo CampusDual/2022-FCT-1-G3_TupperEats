@@ -41,7 +41,17 @@
 			   ]]>
 			</Sentence>
 		</Query>
-		
+		<Query id="graficaProduct">
+			<Sentence>
+				<![CDATA[
+	  			  SELECT
+			      count(*) as cuenta_categoria, m.menu_name
+			      from menu_customer mc join menu m on mc.id_menu =m.menu_id
+			      where m.menu_name like '%Vegetariano' group by m.menu_name
+
+			   ]]>
+			</Sentence>
+		</Query>
 		<Query id="suscriptionMenuQuery">
 		<AmbiguousColumns>
                 <AmbiguousColumn name="first_plate" prefix="pp"
