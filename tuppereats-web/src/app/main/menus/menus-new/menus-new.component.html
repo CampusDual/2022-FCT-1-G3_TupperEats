@@ -4,7 +4,13 @@
   <o-row>
     <o-text-input attr="menu_name" required="yes" fxFlex="40"></o-text-input>
     <o-currency-input class="input-margin-menus"  attr="price" fxFlex="10"></o-currency-input>
-  </o-row>
+
+
+</o-row>
+<o-combo attr="menu_category_id" service="categorymenus" entity="menuCategory" value-column="id_menu_category"
+columns="id_menu_category;menu_name_category" visible-columns="menu_name_category" keys="id_menu_category">
+</o-combo>
+
           <o-combo #firstPlate fxFlex="52" attr="first_plate" label="first_plate"
           service="products" entity="plateType" value-column="product_id"
           columns="product_id;name" visible-columns="name" keys="product_id">
@@ -19,4 +25,5 @@
           service="products" entity="dessertType" value-column="product_id"
           columns="product_id;name" visible-columns="name" keys="product_id">
           </o-combo>
+
 </o-form>

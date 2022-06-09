@@ -70,5 +70,6 @@
   "FILTER": "Filter",
   "CLEAR": "Clear",
   "STARTDATE":"Start Date",
-  "ENDDATE":"End Date"
+  "ENDDATE":"End Date",
+  "menu_category_id":"Category"
 }

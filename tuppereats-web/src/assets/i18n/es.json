@@ -70,5 +70,6 @@
   "FILTER": "Filtrar",
   "CLEAR": "Limpiar",
   "STARTDATE":"Inicio Suscripción",
-  "ENDDATE":"Fin Suscripción"
+  "ENDDATE":"Fin Suscripción",
+  "menu_category_id":"Categoría"
 }

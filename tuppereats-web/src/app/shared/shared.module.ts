@@ -6,13 +6,19 @@ import { OChartModule } from 'ontimize-web-ngx-charts';
 @NgModule({
   imports: [
     OntimizeWebModule,
+    OChartModule,
     OChartModule
+
   ],
   declarations: [
+
   ],
   exports: [
     CommonModule,
+    OChartModule,
     OChartModule
-  ]
+
+  ] ,
+
 })
 export class SharedModule { }

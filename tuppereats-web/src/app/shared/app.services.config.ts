@@ -16,6 +16,9 @@ export const SERVICE_CONFIG: Object = {
   },
   'permissions':{
     'path':'/permissions/permission'
+  },
+  'categorymenus':{
+    'path':'/categorymenus'
   }
 };
 
