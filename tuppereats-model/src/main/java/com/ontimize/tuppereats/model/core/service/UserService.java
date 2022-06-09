@@ -106,7 +106,10 @@ public class UserService implements IUserService {
 
 	}
 
-
-
+	@Override
+	public EntityResult graficaCustomerQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.userDao, keyMap, attrList, UserDao.GRAFICA_CUSTOMER);
+	}
 
 }

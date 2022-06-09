@@ -116,6 +116,19 @@
 					tr.id_rolename = 0 OR tr.id_rolename = 1
 					]]>
 			</Sentence>
-        </Query>  
+        </Query>
+
+        <Query id="graficaCustomer">
+			
+			<Sentence>
+			   <![CDATA[
+			     select count(*) as count_customer, t.registration_date 
+			      from tuser t
+			      join tuser_role tr on t.user_ = tr.user_ 
+			      where tr.id_rolename = 2
+			      group by t.registration_date
+			   ]]>
+		</Sentence>
+		</Query>
     </Queries>
 </JdbcEntitySetup>

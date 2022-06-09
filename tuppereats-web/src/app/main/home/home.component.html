@@ -1,12 +1,32 @@
 
-<div fxLayout="row">
-
-  <div  fxLayoutAlign="space-between  center" >
-
-    <o-chart   type="pie" service="suscriptionCustomers" entity="graficaProduct"
-               keys="suscription_customer_id" x-axis="menu_name"
-               y-axis="cuenta_categoria" [chart-parameters]="movementTypesChartParams">
+  <h3 class="titulo">Gráfica de clientes</h3>
+  <div>
+    <o-chart  class="gCustomer" type="line" service="users" entity="graficaCustomer"
+              keys="user_" x-label="Fecha" x-axis="registration_date" x-data-type="time"
+              y-label="Clientes" y-axis="count_customer">
     </o-chart>
+  </div>
+
+  <div class="gQuesos">
+
+    <div>
+      <h3>Categorias de menús</h3>
+      <o-chart  class="grafica" type="pie" service="suscriptionCustomers" entity="graficaProduct"
+               keys="suscription_customer_id" x-axis="menu_name_category"
+               y-axis="count_category" [chart-parameters]="movementTypesChartParams">
+      </o-chart>
+    </div>
+
+
+    <div>
+      <h3>Tipos de suscripciones</h3>
+      <o-chart  class="grafica" type="pie" service="suscriptionCustomers" entity="graficaSuscription"
+                  keys="suscription_customer_id" x-axis="suscription_name"
+                  y-axis="count_suscription" [chart-parameters]="movementTypesChartParams2">
+    </o-chart>
+    </div>
 
   </div>
-</div>
+
+
+

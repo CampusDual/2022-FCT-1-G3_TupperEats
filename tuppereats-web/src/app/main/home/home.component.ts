@@ -11,6 +11,7 @@ import { D3LocaleService } from '../../shared/d3-locale/d3Locale.service';
 export class HomeComponent implements OnInit {
 
   public movementTypesChartParams: PieChartConfiguration;
+  public movementTypesChartParams2: PieChartConfiguration;
 
   constructor(
     private router: Router,
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit {
   ) {
     const d3Locale = this.d3LocaleService.getD3LocaleConfiguration();
     this._configurePieChart(d3Locale);
+    this._configurePieChart2(d3Locale);
    }
 
   ngOnInit() {
@@ -38,7 +40,24 @@ export class HomeComponent implements OnInit {
     this.movementTypesChartParams.legendPosition = 'bottom';
     this.movementTypesChartParams.legend.vers = 'furious';
     this.movementTypesChartParams.labelType = 'value';
-    //this.movementTypesChartParams.valueType=locale.numberFormat('.0f')
+    this.movementTypesChartParams.cornerRadius = 10;
   }
 
+  private _configurePieChart2(locale: any): void {
+    this.movementTypesChartParams2 = new PieChartConfiguration();
+    this.movementTypesChartParams2.margin.top = 0;
+    this.movementTypesChartParams2.margin.right = 0;
+    this.movementTypesChartParams2.margin.bottom = 0;
+    this.movementTypesChartParams2.margin.left = 0;
+    this.movementTypesChartParams2.legendPosition = 'bottom';
+    this.movementTypesChartParams2.legend.vers = 'furious';
+    this.movementTypesChartParams2.labelType = 'value';
+    this.movementTypesChartParams2.cornerRadius = 10;
+  }
+
+
+
+
+
 }
+

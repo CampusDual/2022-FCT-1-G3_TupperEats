@@ -31,7 +31,7 @@
 			<Sentence>
 			   <![CDATA[
 			     SELECT 
-			      count(sc.id_suscription) as cuenta_suscription, sc.id_suscription , s.suscription_name
+			      count(sc.id_suscription) as count_suscription, sc.id_suscription , s.suscription_name
 				 FROM 
 				  suscription_customer sc
 				  join suscription s on sc.id_suscription = s.suscription_id
@@ -44,10 +44,32 @@
 		<Query id="graficaProduct">
 			<Sentence>
 				<![CDATA[
-	  			  SELECT
-			      count(*) as cuenta_categoria, m.menu_name
-			      from menu_customer mc join menu m on mc.id_menu =m.menu_id
-			      where m.menu_name like '%Vegetariano' group by m.menu_name
+	  			SELECT
+				count(*) as count_category, mcc.menu_name_category
+				FROM
+				menu_customer mc 
+				join menu m on mc.id_menu = m.menu_id
+				join menu_category mcc on m.menu_category_id = mcc.id_menu_category
+				where m.menu_category_id = 3
+				group by mcc.menu_name_category
+				union 
+				SELECT
+				count(*), mcc.menu_name_category
+				FROM
+				menu_customer mc 
+				join menu m on mc.id_menu = m.menu_id
+				join menu_category mcc on m.menu_category_id = mcc.id_menu_category
+				where m.menu_category_id = 2
+				group by mcc.menu_name_category
+				union 
+				SELECT
+				count(*), mcc.menu_name_category
+				FROM
+				menu_customer mc 
+				join menu m on mc.id_menu = m.menu_id
+				join menu_category mcc on m.menu_category_id = mcc.id_menu_category
+				where m.menu_category_id = 1
+				group by mcc.menu_name_category
 
 			   ]]>
 			</Sentence>
