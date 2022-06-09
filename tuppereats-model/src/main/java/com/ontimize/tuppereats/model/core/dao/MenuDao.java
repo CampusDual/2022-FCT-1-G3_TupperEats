@@ -17,4 +17,5 @@ public class MenuDao extends OntimizeJdbcDaoSupport {
 	public static final String FIRST_PLATE = "first_plate";
 	public static final String SECOND_PLATE = "second_plate";
 	public static final String DESSERT = "dessert";
+	public static final String MENU_CATEGORY_ID = "menu_category_id";
 }
