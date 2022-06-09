@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
     this.movementTypesChartParams.legendPosition = 'bottom';
     this.movementTypesChartParams.legend.vers = 'furious';
     this.movementTypesChartParams.labelType = 'value';
-    this.movementTypesChartParams.valueType = locale.numberFormat('$,.2f');
+    //this.movementTypesChartParams.valueType=locale.numberFormat('.0f')
   }
 
 }
