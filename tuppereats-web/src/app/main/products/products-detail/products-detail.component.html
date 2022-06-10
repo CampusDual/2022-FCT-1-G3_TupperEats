@@ -15,20 +15,10 @@
     </o-textarea-input>
   </o-row>
 
-  <o-text-input
-   attr="product_allergic_id"
-          service="products" entity="allergicProduct" value-column="id_allergic"
-          columns="id_allergic;product_allergic_id;allergic_name;allergic_id" visible-columns="allergic_name" keys="product_allergic_id"
-          parent-keys="product_id"
-          >
-    </o-text-input>
+  <o-text-input attr="alergenos" required="yes"></o-text-input>
+  <o-image show-controls="no" id="foto" attr="foto" empty-image="assets/images/no-image.png" sql-type="other" width="100px"
+  fxFlex="40"></o-image>
 
-    <o-textarea-input class="input-margin textarea-style"
-    attr="product_allergic_id"
-          service="products" entity="allergicProduct" value-column="id_allergic"
-          columns="id_allergic;product_allergic_id;allergic_name;allergic_id" visible-columns="allergic_name" keys="product_allergic_id"
-          parent-keys="product_id" fxflex="60" rows="10" required="yes">
-    </o-textarea-input>
 
 </o-form>
 

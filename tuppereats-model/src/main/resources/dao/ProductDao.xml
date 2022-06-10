@@ -17,17 +17,16 @@
 			<Sentence>
 			   <![CDATA[
 			     SELECT
-			      #COLUMNS#
-			     FROM
-			      product p
-			      left join product_category pc on p.product_category_id = pc.id_product_category
+			     #COLUMNS#
+			     
+			     from product_allergic_view v
 			
-			      left join product_type pt on p.id_product_type = pt.product_type_id
-			      
-			      left join product_allergic pa on p.product_id = pa.id_product
-			      
-			      left join allergic a on pa.id_allergic = a.allergic_id 
-			      
+				left join product p on p.product_id  = v.id_product
+			
+				left join product_category pc on p.product_category_id = pc.id_product_category
+			
+				left join product_type pt on p.id_product_type = pt.product_type_id
+				
 				#WHERE#
 			   ]]>
 		</Sentence>
