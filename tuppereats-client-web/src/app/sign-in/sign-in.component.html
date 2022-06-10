@@ -1,0 +1,13 @@
+<sign-in-form  #registryForm service="public" entity="user" keys="user_" columns="user_;password;email;name;surname;city" show-header="no" label-header="REGISTRY" header-actions="R;I;U;D">
+  <img src="../../assets/images/tuppereats.png" alt="logo" />
+  <div class="form_container">
+    <o-text-input appearance='outline' attr="user_" required="yes" flex> </o-text-input>
+    <o-text-input appearance='outline' attr="surname"  flex> </o-text-input>
+    <o-text-input appearance='outline' attr="city"  flex> </o-text-input>
+    <o-text-input appearance='outline' attr="name"  flex> </o-text-input>
+    <o-email-input appearance='outline' attr="email"  flex> </o-email-input>
+    <o-password-input appearance='outline' attr="password" required="yes"  min-length="4" max-length="30" flex ></o-password-input>
+    <!-- <o-password-input appearance='outline' attr="password2" required="yes"  min-length="4" max-length="30" flex></o-password-input> -->
+    <button type="submit">Enviar</button>
+  </div>
+</sign-in-form>
