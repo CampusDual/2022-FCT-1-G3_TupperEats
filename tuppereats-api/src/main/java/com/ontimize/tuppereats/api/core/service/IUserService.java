@@ -23,6 +23,8 @@ public interface IUserService {
 
 	public EntityResult noCustomerQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException;
+	
+	public EntityResult userInsertClientQuery(Map<?, ?> attrMap);
 
 	public EntityResult userInsert(Map<?, ?> attrMap);
 	public EntityResult userUpdate(Map<?, ?> attrMap, Map<?, ?> keyMap);

@@ -106,6 +106,14 @@ public class UserService implements IUserService {
 
 	}
 
+	@Override
+	public EntityResult userInsertClientQuery(Map<?, ?> attrMap) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
 
 
 
