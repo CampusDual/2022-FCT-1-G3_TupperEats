@@ -31,7 +31,7 @@
 			<Sentence>
 			   <![CDATA[
 			     SELECT 
-			      count(sc.id_suscription) as count_suscription, sc.id_suscription , s.suscription_name
+			      (count(sc.id_suscription)::float)/(select count(sc1.id_suscription) from  suscription_customer sc1)  as count_suscription, sc.id_suscription , s.suscription_name
 				 FROM 
 				  suscription_customer sc
 				  join suscription s on sc.id_suscription = s.suscription_id
@@ -45,7 +45,8 @@
 			<Sentence>
 				<![CDATA[
 	  			SELECT
-				count(*) as count_category, mcc.menu_name_category
+				(count(*)::float)/(select count(*) from menu_customer mc3) as count_category
+				, mcc.menu_name_category
 				FROM
 				menu_customer mc 
 				join menu m on mc.id_menu = m.menu_id
@@ -54,7 +55,8 @@
 				group by mcc.menu_name_category
 				union 
 				SELECT
-				count(*), mcc.menu_name_category
+				(count(*)::float)/(select count(*) from menu_customer mc3)
+				, mcc.menu_name_category
 				FROM
 				menu_customer mc 
 				join menu m on mc.id_menu = m.menu_id
@@ -63,7 +65,8 @@
 				group by mcc.menu_name_category
 				union 
 				SELECT
-				count(*), mcc.menu_name_category
+				(count(*)::float)/(select count(*) from menu_customer mc3)
+				, mcc.menu_name_category
 				FROM
 				menu_customer mc 
 				join menu m on mc.id_menu = m.menu_id

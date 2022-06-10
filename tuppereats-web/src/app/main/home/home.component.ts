@@ -41,6 +41,8 @@ export class HomeComponent implements OnInit {
     this.movementTypesChartParams.legend.vers = 'furious';
     this.movementTypesChartParams.labelType = 'value';
     this.movementTypesChartParams.cornerRadius = 10;
+    this.movementTypesChartParams.valueType = locale.numberFormat('%,.2f');
+
   }
 
   private _configurePieChart2(locale: any): void {
@@ -53,6 +55,8 @@ export class HomeComponent implements OnInit {
     this.movementTypesChartParams2.legend.vers = 'furious';
     this.movementTypesChartParams2.labelType = 'value';
     this.movementTypesChartParams2.cornerRadius = 10;
+    this.movementTypesChartParams2.valueType = locale.numberFormat('%,.2f');
+
   }
 
 
