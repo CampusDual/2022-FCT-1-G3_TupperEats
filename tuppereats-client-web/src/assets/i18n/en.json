@@ -18,5 +18,16 @@
   "REMEMBER_ME": "Remember me",
   "FORGOT_PWD": "Forgot your password?",
   "FOOTER_CREATED_BY": "Created by Imatia Innovation",
-  "FOOTER_RIGHTS": "All rights reserved"
+  "FOOTER_RIGHTS": "All rights reserved",
+  "user_": "User name",
+  "password":"Password",
+  "password2":"Password",
+  "name":"Name",
+  "city":"City",
+  "surname":"Surname",
+  "email":"Email",
+  "address":"Address",
+  "phone":"Phone",
+  "ERROR_SIGN_IN":"Error sign in",
+  "ERROR_PASSWORDS_NOT_MATCH":"Error Passwords not match"
 }
