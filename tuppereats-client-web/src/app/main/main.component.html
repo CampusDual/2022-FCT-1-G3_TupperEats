@@ -1,3 +1,5 @@
-<o-app-layout show-language-selector="no">
-  <router-outlet></router-outlet>
-</o-app-layout>
+<o-bar-menu title="APP_TITLE">
+  <img src="../../assets/images/tuppereats.png" style="position:absolute;" width="120" height="120" />
+  <o-bar-menu-item title="LOGOUT" icon="power_settings_new" [action]="logout"></o-bar-menu-item>
+</o-bar-menu>
+<router-outlet></router-outlet>

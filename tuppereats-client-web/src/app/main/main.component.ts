@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-main',
@@ -6,4 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
+
+  constructor(public router: Router) { }
+
+  logout() {
+    const _this: any = this;
+    const authService = _this.injector.get(AuthService);
+    authService.clearSessionData();
+    this.router.navigateByUrl("/homepage");
+  }
 }
