@@ -1,17 +1,17 @@
 <o-form-layout-manager title="{{'PRODUCT' | oTranslate }}" separator=" " mode="dialog" label-columns="name">
   <div fxFill fxLayout="column" fxLayoutAlign="start">
   <o-table class="o-table-column-centered" attr="productsTable" service="products" entity="product" keys="product_id"
-    columns="product_id;name;photo;ingredients;name_category;alergenos;foto"
-    visible-columns="photo;name;ingredients;name_category;alergenos;foto" query-rows="20" detail-mode= "dblclick">
+    columns="product_id;name;photo;ingredients;name_category;id_alergenos;photo_alergenos"
+    visible-columns="photo;name;ingredients;name_category;id_alergenos;photo_alergenos" query-rows="20" detail-mode= "dblclick">
 
     <o-table-column width="40px" attr="photo" label="photo" orderable="no" searchable="no" type="image" avatar="yes"
     empty-image="assets/images/no-image.png" image-type="base64"></o-table-column>
 
-    <o-table-column width="40px" attr="foto" label="foto" orderable="no" searchable="no" type="image" avatar="yes"
-    empty-image="assets/images/no-image.png" image-type="base64"></o-table-column>
-
     <o-table-column width="300px" attr="name_category"></o-table-column>
     <o-table-column width="400px" attr="name"></o-table-column>
+    <!-- <o-table-column attr="photo_alergenos" title="alergenos foto" class="o-table-column-centered">
+      <app-alergic-render></app-alergic-render>
+    </o-table-column> -->
   </o-table>
 </div>
 </o-form-layout-manager>

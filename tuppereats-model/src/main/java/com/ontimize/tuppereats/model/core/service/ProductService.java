@@ -27,7 +27,7 @@ public class ProductService implements IProductService {
 	@Override
 	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult productQuery(Map<String, Object> keyMap, List<String> attrList)
-			throws OntimizeJEERuntimeException {
+			throws OntimizeJEERuntimeException {		
 		return this.daoHelper.query(this.productDao, keyMap, attrList);
 	}
 
@@ -65,6 +65,6 @@ public class ProductService implements IProductService {
 	@Override
 	public EntityResult allergicProductQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException {
-		return this.daoHelper.query(productDao, keyMap, attrList, ProductDao.QUERY_ALLERGIC);
+		return this.daoHelper.query(this.productDao, keyMap, attrList, ProductDao.QUERY_ALLERGIC);
 	}
 }
