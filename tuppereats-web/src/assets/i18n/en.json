@@ -71,5 +71,6 @@
   "CLEAR": "Clear",
   "STARTDATE":"Start Date",
   "ENDDATE":"End Date",
-  "menu_category_id":"Category"
+  "menu_category_id":"Category",
+  "total_gastado":"Total Spent"
 }

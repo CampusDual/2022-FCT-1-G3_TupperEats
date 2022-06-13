@@ -18,8 +18,8 @@
 
   <o-row>
     <o-table insert-button="no" delete-button="no" class="o-table-column-centered" fxFlex="50" attr="suscription_customer" service="users" entity="userSuscription"
-      parent-keys="user_" keys="user_" columns="user_;suscription_customer_id;suscription_name;suscription_price;suscription_id;start_date_suscription_customer;end_date_suscription_customer;total_gastado"
-      visible-columns="suscription_name;start_date_suscription_customer;end_date_suscription_customer;suscription_price;total_gastado" query-rows="10" detail-mode="none">
+      parent-keys="user_" keys="user_" columns="user_;suscription_customer_id;suscription_name;suscription_price;suscription_id;start_date_suscription_customer;end_date_suscription_customer"
+      visible-columns="suscription_name;start_date_suscription_customer;end_date_suscription_customer;suscription_price" query-rows="10" detail-mode="none">
       <o-table-column attr="start_date_suscription_customer" type="date" format="LL" ></o-table-column>
       <o-table-column attr="end_date_suscription_customer" type="date" format="LL" ></o-table-column>
       <o-table-column attr="suscription_price" type="currency" currency-symbol="€" currency-symbol-position="right"
@@ -35,8 +35,8 @@
 
   <o-row>
     <o-form editable-detail="no" show-header="no"
-    attr="suscription_customer" service="users" entity="userSuscription"
-    parent-keys="user_" keys="user_" columns="user_;suscription_customer_id;suscription_name;suscription_price;suscription_id;start_date_suscription_customer;end_date_suscription_customer;total_gastado"
+    attr="suscription_customer" service="users" entity="totalSpent"
+    parent-keys="user_" keys="user_" columns="user_;total_gastado"
     visible-columns="total_gastado">
       <o-currency-input attr="total_gastado" read-only="yes" fxFlex="30"></o-currency-input>
     </o-form>

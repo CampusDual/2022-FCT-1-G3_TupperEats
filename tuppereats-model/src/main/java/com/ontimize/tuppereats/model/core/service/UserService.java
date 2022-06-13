@@ -46,6 +46,12 @@ public class UserService implements IUserService {
 	}
 
 	@Override
+	public EntityResult totalSpentQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.userDao, keyMap, attrList, UserDao.TOTAL_SPENT);
+	}
+
+	@Override
 	public EntityResult userMenuQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException {
 		return this.daoHelper.query(this.userDao, keyMap, attrList, UserDao.USER_MENU_QUERY);
@@ -111,5 +117,6 @@ public class UserService implements IUserService {
 			throws OntimizeJEERuntimeException {
 		return this.daoHelper.query(this.userDao, keyMap, attrList, UserDao.GRAFICA_CUSTOMER);
 	}
+
 
 }

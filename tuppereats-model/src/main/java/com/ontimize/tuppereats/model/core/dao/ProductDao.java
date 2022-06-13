@@ -18,6 +18,7 @@ public class ProductDao extends OntimizeJdbcDaoSupport {
 	public static final String PRODUCT_CATEGORY_ID = "product_category_id";
 	public static final String ID_PRODUCT_TYPE = "id_product_type";
 	public static final String QUERY_PLATE_TYPE = "plate_type";
+	public static final String QUERY_SECOND_PLATE_TYPE = "secondPlate_type";
 	public static final String QUERY_DESSERT_TYPE = "dessert_type";
 	public static final String QUERY_ALLERGIC = "allergicProduct";
 

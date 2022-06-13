@@ -15,6 +15,9 @@ public interface IUserService {
 	public EntityResult userSuscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException;
 
+	public EntityResult totalSpentQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException;
+
 	public EntityResult userMenuQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException;
 

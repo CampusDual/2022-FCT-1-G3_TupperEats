@@ -29,6 +29,7 @@ public class UserDao extends OntimizeJdbcDaoSupport {
 	public static final String FIRSTLOGIN 			  = "firstlogin";
 	public static final String REGISTRATION_DATE = "registration_date";
 	public static final String USER_SUSCRIPTION_QUERY = "userSuscriptionQuery";
+	public static final String TOTAL_SPENT = "totalSpentQuery";
 	public static final String USER_MENU_QUERY = "userMenuQuery";
 	public static final String CUSTOMER_QUERY = "customerQuery";
 	public static final String NO_CUSTOMER_QUERY = "noCustomerQuery";

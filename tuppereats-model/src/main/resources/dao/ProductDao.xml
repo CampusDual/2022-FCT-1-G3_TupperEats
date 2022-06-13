@@ -58,6 +58,19 @@
 		</Sentence>
 		</Query>
 		
+		<Query id="secondPlate_type">
+			<Sentence>
+			   <![CDATA[
+			     SELECT
+			      #COLUMNS#
+			     FROM
+			      product     
+				 WHERE
+					id_product_type=5
+			   ]]>
+		</Sentence>
+		</Query>
+		
 		<Query id="dessert_type">
 			<Sentence>
 			   <![CDATA[

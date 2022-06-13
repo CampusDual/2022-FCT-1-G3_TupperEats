@@ -38,6 +38,12 @@ public class ProductService implements IProductService {
 	}
 
 	@Override
+	public EntityResult secondPlateTypeQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.productDao, keyMap, attrList, ProductDao.QUERY_SECOND_PLATE_TYPE);
+	}
+
+	@Override
 	public EntityResult dessertTypeQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException {
 		return this.daoHelper.query(this.productDao, keyMap, attrList, ProductDao.QUERY_DESSERT_TYPE);

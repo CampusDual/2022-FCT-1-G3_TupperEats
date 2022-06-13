@@ -71,5 +71,6 @@
   "CLEAR": "Limpiar",
   "STARTDATE":"Inicio Suscripción",
   "ENDDATE":"Fin Suscripción",
-  "menu_category_id":"Categoría"
+  "menu_category_id":"Categoría",
+  "total_gastado":"Gasto Total del cliente"
 }
