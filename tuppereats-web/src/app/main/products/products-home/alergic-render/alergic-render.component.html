@@ -1,6 +1,7 @@
 <ng-template #templateref let-cellvalue="cellvalue" let-rowvalue="rowvalue">
   {{getCellData(cellvalue, rowvalue)}}
 
-  <img [src]="getCellData(cellvalue, rowvalue)" width="30px" height="20px"/>
+  <img *ngFor="let image of image_array" [src]="image" width="30px" height="20px"/>
+
 
 </ng-template>
