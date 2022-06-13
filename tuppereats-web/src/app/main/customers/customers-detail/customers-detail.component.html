@@ -16,6 +16,11 @@
     <o-text-input  class="users-margin" attr="city" fxFlex="33"></o-text-input>
   </o-row>
 
+  <!-- <o-text-input  attr="suscription_customer" entity="userSuscription"
+  parent-keys="user_" keys="user_" columns="user_;total_gastado"
+  visible-columns="total_gastado">
+  </o-text-input> -->
+
   <o-row>
     <o-table insert-button="no" delete-button="no" class="o-table-column-centered" fxFlex="50" attr="suscription_customer" service="users" entity="userSuscription"
       parent-keys="user_" keys="user_" columns="user_;suscription_customer_id;suscription_name;suscription_price;suscription_id;start_date_suscription_customer;end_date_suscription_customer"
@@ -23,7 +28,10 @@
       <o-table-column attr="start_date_suscription_customer" type="date" format="LL" ></o-table-column>
       <o-table-column attr="end_date_suscription_customer" type="date" format="LL" ></o-table-column>
       <o-table-column attr="suscription_price" type="currency" currency-symbol="€" currency-symbol-position="right"
-      thousand-separator="." decimal-separator="," ></o-table-column>
+      thousand-separator="." decimal-separator="," >
+      <o-table-column attr="total_gastado" ></o-table-column>
+
+    </o-table-column>
     </o-table>
 
     <o-table insert-button="no" delete-button="no" class="o-table-column-centered" fxFlex="50" attr="menu_customer" service="users" entity="userMenu"

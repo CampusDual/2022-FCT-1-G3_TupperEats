@@ -56,12 +56,12 @@
 			
 			<Sentence>
 			   <![CDATA[
-			     SELECT
-			      #COLUMNS#
-			     FROM
-			   	tuser u JOIN suscription_customer sc ON u.user_ = sc.user_suscription
-				JOIN suscription s on sc.id_suscription = s.suscription_id
-				#WHERE#
+			  SELECT
+                 *, sum(s.suscription_price) over(order by u.user_) as total_gastado
+                 FROM
+                   tuser u JOIN suscription_customer sc ON u.user_ = sc.user_suscription
+                JOIN suscription s on sc.id_suscription = s.suscription_id
+                group by u.user_, sc.suscription_customer_id, s.suscription_id
 			   ]]>
 		</Sentence>
 		</Query>
