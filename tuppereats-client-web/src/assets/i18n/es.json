@@ -29,5 +29,9 @@
   "address":"Dirección",
   "phone":"Teléfono de contacto",
   "ERROR_SIGN_IN":"Error al registrarse, inténtelo de nuevo.",
-  "ERROR_PASSWORDS_NOT_MATCH":"Las contraseñas no coinciden, vuelva a introducirlas."
+  "ERROR_PASSWORDS_NOT_MATCH":"Las contraseñas no coinciden, vuelva a introducirlas.",
+  "MONTHLY": "Mensual",
+  "WEEKLY": "Semanal",
+  "SUBSCRIPTIONS": "Suscripciones",
+  "MY AREA": "Mi área"
 }

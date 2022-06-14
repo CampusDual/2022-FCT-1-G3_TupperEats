@@ -80,6 +80,30 @@ body{
   opacity: 0.5;
 }
 
+.main_sub_button{
+  background-color: chocolate;
+  width: 150px;
+  height: 60px;
+  margin-top: 30px;
+  text-align: center;
+}
+.main_sub_button span{
+  color: antiquewhite !important;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+}
+
+.card_porperties_container{
+  margin: 3rem 0 0 0;
+  background-color: #d5fdcc;
+}
+.card_porperties_text{
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+}
+
 
 /* footer  */
 .footer{
