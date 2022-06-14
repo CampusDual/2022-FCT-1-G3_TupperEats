@@ -20,9 +20,7 @@ export class AlergicRenderComponent extends OBaseTableCellRenderer {
 
     if(rowvalue!=undefined){
       let image_array = rowvalue["photo_alergenos"].split(';;;');
-
-
-     this.image_array=image_array.map(image=>'data:image/*;base64,'+image);
+      this.image_array=image_array.map(image=> this.sanitizer.bypassSecurityTrustResourceUrl('data:image/png;base64,'+image));
 
     }
      return '';
