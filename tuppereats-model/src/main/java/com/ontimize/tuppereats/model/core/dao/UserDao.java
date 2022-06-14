@@ -33,6 +33,7 @@ public class UserDao extends OntimizeJdbcDaoSupport {
 	public static final String USER_MENU_QUERY = "userMenuQuery";
 	public static final String CUSTOMER_QUERY = "customerQuery";
 	public static final String NO_CUSTOMER_QUERY = "noCustomerQuery";
+	public static final String COMBO_USER = "comboUser";
 	public static final String GRAFICA_CUSTOMER = "graficaCustomer";
 
 }

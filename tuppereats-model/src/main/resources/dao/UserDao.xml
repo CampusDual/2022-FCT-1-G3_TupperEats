@@ -13,6 +13,7 @@
     </UpdateKeys>
     <Queries>
         <Query id="default">
+        
             <ValidColumns>
                 <Column>user_</Column>
                 <Column>email</Column>
@@ -29,8 +30,11 @@
                     SELECT
                         #COLUMNS#
                     FROM
-                        ${mainschema}.tuser
-                    #WHERE#
+                        tuser tu
+						tuser_role tur ON tu.user_ = tur.user_
+						trole tr on tur.id_rolename = tr.id_rolename
+                    WHERE
+					tr.id_rolename = 2
                 ]]>
             </Sentence>
         </Query>    
@@ -126,7 +130,20 @@
 						JOIN ${mainschema}.tuser_role tur ON tu.user_ = tur.user_
 						JOIN ${mainschema}.trole tr on tur.id_rolename = tr.id_rolename
 					WHERE
-					tr.id_rolename = 0 OR tr.id_rolename = 1
+					tr.id_rolename = 1
+					]]>
+			</Sentence>
+        </Query>
+        
+        <Query id="comboUser">
+			<Sentence>
+					<![CDATA[
+					select
+						#COLUMNS#
+					from
+						trole tr 
+					WHERE
+					tr.id_rolename != 2
 					]]>
 			</Sentence>
         </Query>

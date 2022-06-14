@@ -29,6 +29,9 @@ public interface IUserService {
 	
 	public EntityResult graficaCustomerQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException;
+	
+	public EntityResult comboUserQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException;
 
 	public EntityResult userInsert(Map<?, ?> attrMap);
 	public EntityResult userUpdate(Map<?, ?> attrMap, Map<?, ?> keyMap);

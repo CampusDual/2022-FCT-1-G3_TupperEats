@@ -118,5 +118,11 @@ public class UserService implements IUserService {
 		return this.daoHelper.query(this.userDao, keyMap, attrList, UserDao.GRAFICA_CUSTOMER);
 	}
 
+	@Override
+	public EntityResult comboUserQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.userDao, keyMap, attrList, UserDao.COMBO_USER);
+	}
+
 
 }
