@@ -27,14 +27,14 @@
             </ValidColumns>
             <Sentence>
                 <![CDATA[
-                    SELECT
+
+                         SELECT
                         #COLUMNS#
-                    FROM
-                        tuser tu
-						tuser_role tur ON tu.user_ = tur.user_
-						trole tr on tur.id_rolename = tr.id_rolename
-                    WHERE
-					tr.id_rolename = 2
+                         FROM
+                        ${mainschema}.tuser
+                    #WHERE#
+
+
                 ]]>
             </Sentence>
         </Query>    
