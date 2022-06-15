@@ -1,7 +1,6 @@
 import { ChangeDetectorRef, Component, ElementRef, forwardRef, Injector, NgZone, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { dataServiceFactory, DEFAULT_INPUTS_O_FORM, DEFAULT_OUTPUTS_O_FORM, OFormComponent, OntimizeService } from 'ontimize-web-ngx';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @Component({
@@ -55,22 +54,12 @@ export class SignInFormComponent extends OFormComponent implements OnInit {
     this.dialogService.alert('ERROR', msg);
   }
 
-  /* Add new methods depending on your requirements */
-
-  protected getCaptcha(response: any) {
-    this.recaptchaResponseToken = response;
-  }
-
-  public send() {
+  public signin(){
     if (this.formGroup.controls['password'].value !== this.formGroup.controls['password2'].value) {
       this.dialogService.alert('ERROR', 'ERROR_PASSWORDS_NOT_MATCH');
     }  else {
       this.insert();
     }
-  }
-
-  public signin(){
-    this.insert();
   }
 
 }

@@ -1,3 +1,13 @@
-<o-app-layout show-language-selector="no">
-  <router-outlet></router-outlet>
-</o-app-layout>
+<o-bar-menu title="APP_TITLE">
+  <img src="../../assets/images/tuppereats.png" style="float:left;" width="64" height="64" />
+  <o-bar-menu-group title="SUBSCRIPTIONS">
+    <o-bar-menu-item title="WEEKLY" [action]="navigateToWeekly"></o-bar-menu-item>
+    <o-bar-menu-item title="MONTHLY" [action]="navigateToMonthly"></o-bar-menu-item>
+  </o-bar-menu-group>
+  <o-bar-menu-group title="MY AREA" icon="account_circle">
+    <o-bar-menu-item title="HISTORY" [action]="navigateToHistory"></o-bar-menu-item>
+    <o-bar-menu-item title="MY PERSONAL" [action]="navigateToPersonal"></o-bar-menu-item>
+    <o-bar-menu-item title="LOGOUT" icon="power_settings_new" [action]="logout"></o-bar-menu-item>
+  </o-bar-menu-group>
+</o-bar-menu>
+<router-outlet></router-outlet>

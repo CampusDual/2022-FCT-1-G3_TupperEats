@@ -1,0 +1,5 @@
+<ng-template #templateref let-cellvalue="cellvalue" let-rowvalue="rowvalue">
+  {{getCellData(cellvalue, rowvalue)}}
+  <o-image class="image_render_menu" attr="first_plate_photo" [data]="rowvalue['second_plate_photo']"
+  empty-image="assets/images/no-image.png" show-controls="no"></o-image>
+</ng-template>

@@ -5,4 +5,7 @@ export const SERVICE_CONFIG: Object = {
   public: {
     path: "/public"
   },
+  menus: {
+    path: "/menus"
+  }
 };

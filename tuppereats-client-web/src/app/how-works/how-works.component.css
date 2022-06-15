@@ -61,16 +61,6 @@
   padding: 30px;
   width: 460px;
 }
-.card_porperties_container{
-  margin: 3rem 0 0 0;
-  background-color: #d5fdcc;
-}
-.card_porperties_text{
-  display: flex;
-  align-items: flex-start;
-  /* margin-bottom: 1em; */
-  padding: 20px;
-}
 
 .images_container{
   display: flex;
