@@ -1,5 +1,7 @@
 package com.ontimize.tuppereats.model.core.service;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -46,7 +48,23 @@ public class ProductService implements IProductService {
 	@Override
 	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult productInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
-		return this.daoHelper.insert(this.productDao, attrMap);
+		
+		EntityResult insertProduct = this.daoHelper.insert(this.productDao,attrMap);
+		
+		Map<String, Object> datos = new HashMap<>();
+		List<String> list = new ArrayList();
+		list.add(ProductDao.PRODUCT_ID);
+		datos.put("name", attrMap.get("name"));
+		
+		EntityResult query = this.daoHelper.query(this.productDao, datos, list);
+		
+		if (query.getCode() != EntityResult.OPERATION_WRONG) {
+		    for (int i = 0; i < query.calculateRecordNumber(); i++) {
+		        Map<?, ?> recordValues = query.getRecordValues(i);
+		  }
+		}
+		        
+		return insertProduct;
 	}
 
 	@Override
