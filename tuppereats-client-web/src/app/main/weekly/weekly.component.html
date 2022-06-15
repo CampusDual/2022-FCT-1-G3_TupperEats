@@ -1,1 +1,45 @@
-<p>weekly works!</p>
+<o-form-layout-manager title="{{'MENU' | oTranslate }}" separator=" " mode="dialog" label-columns="name">
+  <div  fxLayout="column" fxLayoutAlign="start" style="height:70%;">
+    <o-table  insert-button="no" delete-button="no" refresh-button="no" class="o-table-column-centered" attr="menusTable" service="menus" entity="menu" keys="menu_id"
+      columns="menu_id;menu_name;first_plate;second_plate;dessert;first_plate_name;second_plate_name;dessert_name;price;first_plate_photo;second_plate_photo;dessert_photo"
+      visible-columns="menu_name;first_plate_name_photo;second_plate_name_photo;dessert_name_photo"
+      query-rows="10" detail-mode="dblclick">
+      <o-table-column attr="first_plate_name_photo" title="first_plate_name" class="o-table-column-centered">
+        <app-menu-name-photo-render></app-menu-name-photo-render>
+      </o-table-column>
+      <o-table-column attr="second_plate_name_photo" title="second_plate_name" class="o-table-column-centered">
+        <app-menu-name-photo2-render></app-menu-name-photo2-render>
+      </o-table-column>
+      <o-table-column attr="dessert_name_photo" title="dessert_name" class="o-table-column-centered">
+        <app-menu-name-photo3-render></app-menu-name-photo3-render>
+      </o-table-column>
+    </o-table>
+  </div>
+</o-form-layout-manager>
+<h2 class="text-centered margin-on-top-6">↓&nbsp;  Configura tu menú semanal&nbsp;  ↓</h2>
+<div style="display: flex; flex-direction: row; justify-content: space-evenly; width: 100%;" class="margin-top-4">
+  <div>
+    <h4>Lunes</h4>
+    <o-combo #dia1 attr="menu" service="menus" entity="menu" value-column="menu_id" columns="menu_id;menu_name" visible-columns="menu_name" keys="menu_id" required="yes"></o-combo>
+  </div>
+  <div>
+    <h4>Martes</h4>
+    <o-combo #dia2 attr="menu" service="menus" entity="menu" value-column="menu_id" columns="menu_id;menu_name" visible-columns="menu_name" keys="menu_id" required="yes"></o-combo>
+  </div>
+  <div>
+    <h4>Miércoles</h4>
+    <o-combo #dia3 attr="menu" service="menus" entity="menu" value-column="menu_id" columns="menu_id;menu_name" visible-columns="menu_name"  keys="menu_id" required="yes"></o-combo>
+  </div>
+  <div>
+    <h4>Jueves</h4>
+    <o-combo #dia4 attr="menu" service="menus" entity="menu" value-column="menu_id" columns="menu_id;menu_name" visible-columns="menu_name"  keys="menu_id" required="yes"></o-combo>
+  </div>
+  <div>
+    <h4>Viernes</h4>
+    <o-combo #dia5 attr="menu" service="menus" entity="menu" value-column="menu_id" columns="menu_id;menu_name" visible-columns="menu_name" keys="menu_id" required="yes"></o-combo>
+  </div>
+</div>
+<h3 class="text-centered margin-top-4">Recibiras tu menú a partir del siguiente Lunes</h3>
+<div class="text-centered" style="margin-bottom: 6rem;">
+  <button mat-raised-button color="primary" style="width: 200px;height: 60px;font-weight: bold;">Realizar pedido</button>
+</div>

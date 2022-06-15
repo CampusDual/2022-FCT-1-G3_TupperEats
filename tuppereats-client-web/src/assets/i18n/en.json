@@ -35,5 +35,10 @@
   "SUBSCRIPTIONS": "Subscriptions",
   "MY AREA": "My area",
   "HISTORY": "History",
-  "MY PERSONAL": "My personal information"
+  "MY PERSONAL": "My personal information",
+  "menu_name": "Menu Name",
+  "first_plate_name": "First Plate",
+  "second_plate_name": "Second Plate",
+  "dessert_name": "Dessert",
+  "menu": "Select a menu"
 }
