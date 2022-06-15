@@ -15,6 +15,7 @@ import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
 import com.ontimize.jee.common.security.PermissionsProviderSecured;
 import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import com.ontimize.tuppereats.api.core.service.IProductService;
+import com.ontimize.tuppereats.model.core.dao.ProductAllergicDao;
 import com.ontimize.tuppereats.model.core.dao.ProductDao;
 
 @Service("ProductService")
@@ -25,6 +26,9 @@ public class ProductService implements IProductService {
 	private ProductDao productDao;
 	@Autowired
 	private DefaultOntimizeDaoHelper daoHelper;
+	
+	@Autowired
+    private ProductAllergicDao productAllergicDao;
 
 	@Override
 	@Secured({ PermissionsProviderSecured.SECURED })
@@ -47,26 +51,22 @@ public class ProductService implements IProductService {
 
 	@Override
 	@Secured({ PermissionsProviderSecured.SECURED })
-	public EntityResult productInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
-		
-		EntityResult insertProduct = this.daoHelper.insert(this.productDao,attrMap);
-		
-		Map<String, Object> datos = new HashMap<>();
-		List<String> list = new ArrayList();
-		list.add(ProductDao.PRODUCT_ID);
-		datos.put("name", attrMap.get("name"));
-		
-		EntityResult query = this.daoHelper.query(this.productDao, datos, list);
-		
-		if (query.getCode() != EntityResult.OPERATION_WRONG) {
-		    for (int i = 0; i < query.calculateRecordNumber(); i++) {
-		        Map<?, ?> recordValues = query.getRecordValues(i);
-		  }
-		}
-		        
-		return insertProduct;
-	}
+	 public EntityResult productInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+	     ArrayList<Object> allergic_id = new ArrayList<>();
+	     EntityResult insertProduct = this.daoHelper.insert(this.productDao, attrMap);
+	     Map<String, Object> datos = new HashMap<>();
+	     for (String clave : attrMap.keySet()) {
+	         if (clave.equalsIgnoreCase("allergic_id"))
+	             allergic_id = (ArrayList<Object>) attrMap.get(clave);
+	     }
+	     for (Object id_allergic : allergic_id) {
+	         datos.put("id_allergic", id_allergic);
+	         datos.put("id_product", insertProduct.get("product_id"));
+	         this.daoHelper.insert(this.productAllergicDao,datos);
+	     }
 
+	     return insertProduct;
+	 }
 	@Override
 	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult productUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
