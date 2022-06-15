@@ -17,4 +17,12 @@
     <o-textarea-input class="input-margin textarea-style" attr="ingredients" fxflex="60" rows="10" required="yes">
     </o-textarea-input>
   </o-row>
+
+  <o-row>
+    <o-combo attr="combo-editable-multiple" multiple="yes" #dessert fxFlex="52" attr="allergic_id"
+          service="products" entity="allergicProduct" value-column="allergic_id"
+          columns="allergic_id;allergic_name" visible-columns="allergic_name" keys="allergic_id">
+    </o-combo>
+  </o-row>
+
 </o-form>

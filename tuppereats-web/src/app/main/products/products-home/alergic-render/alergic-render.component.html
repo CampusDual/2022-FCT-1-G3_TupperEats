@@ -1,0 +1,3 @@
+<ng-template #templateref let-cellvalue="cellvalue" let-rowvalue="rowvalue">
+  <img *ngFor="let image of getCellData(cellvalue,rowvalue)" [src]="image" width="34px" height="48px"/>
+</ng-template>
