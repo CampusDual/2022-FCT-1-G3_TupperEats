@@ -9,14 +9,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ontimize.jee.common.dto.EntityResult;
+import com.ontimize.jee.common.dto.EntityResultMapImpl;
 import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
 import com.ontimize.jee.common.security.PermissionsProviderSecured;
 import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import com.ontimize.tuppereats.api.core.service.IProductService;
 import com.ontimize.tuppereats.model.core.dao.ProductAllergicDao;
 import com.ontimize.tuppereats.model.core.dao.ProductDao;
+import com.ontimize.tuppereats.model.core.dao.UserRoleDao;
 
 @Service("ProductService")
 @Lazy
@@ -76,8 +79,35 @@ public class ProductService implements IProductService {
 
 	@Override
 	@Secured({ PermissionsProviderSecured.SECURED })
+	@Transactional(rollbackFor = Exception.class)
 	public EntityResult productDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
-		return this.daoHelper.delete(this.productDao, keyMap);
+		
+		boolean canDelete = true;
+		List<String> attrList = new ArrayList<>();
+		attrList.add(ProductAllergicDao.PRODUCT_ALLERGIC_ID);
+		EntityResult query = this.daoHelper.query(this.productAllergicDao, keyMap, attrList);
+
+		if (query.getCode() != EntityResult.OPERATION_WRONG) {
+
+			for (int i = 0; i < query.calculateRecordNumber(); i++) {
+				Map<?, ?> recordValues = query.getRecordValues(i);
+				EntityResult delete = this.daoHelper.delete(productAllergicDao, recordValues);
+
+				if (delete.getCode() == EntityResult.OPERATION_WRONG) {
+					canDelete = false;
+					break;
+				}
+			}
+		}
+
+		if (canDelete) {
+			return this.daoHelper.delete(this.productDao, keyMap);
+		}
+
+		EntityResult toret = new EntityResultMapImpl();
+		toret.setCode(EntityResult.OPERATION_WRONG);
+		toret.setMessage("No se puede eliminar el producto");
+		return toret;
 	}
 
 	@Override

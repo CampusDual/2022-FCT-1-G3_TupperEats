@@ -15,16 +15,12 @@
     </o-textarea-input>
   </o-row>
 
-  <!-- <o-text-input attr="id_alergenos" required="yes"></o-text-input> -->
-
-  <!-- <o-image show-controls="no" id="foto" attr="foto" empty-image="assets/images/no-image.png" sql-type="other" width="100px"
-  fxFlex="40"></o-image> -->
-
-  <!-- <o-combo #dessert fxFlex="52" attr="allergic_id"
-          service="products" entity="allergicProduct" value-column="allergic_name"
+  <o-row>
+    <o-combo attr="combo-editable-multiple" multiple="yes" #dessert fxFlex="52" attr="id_alergenos"
+          service="products" entity="allergicProduct" value-column="allergic_id"
           columns="allergic_id;allergic_name" visible-columns="allergic_name" keys="allergic_id">
-  </o-combo> -->
-
+    </o-combo>
+  </o-row>
 
 </o-form>
 
