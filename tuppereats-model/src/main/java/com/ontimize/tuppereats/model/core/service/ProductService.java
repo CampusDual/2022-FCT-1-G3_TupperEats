@@ -19,7 +19,6 @@ import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import com.ontimize.tuppereats.api.core.service.IProductService;
 import com.ontimize.tuppereats.model.core.dao.ProductAllergicDao;
 import com.ontimize.tuppereats.model.core.dao.ProductDao;
-import com.ontimize.tuppereats.model.core.dao.UserRoleDao;
 
 @Service("ProductService")
 @Lazy
@@ -57,6 +56,7 @@ public class ProductService implements IProductService {
 			throws OntimizeJEERuntimeException {
 		return this.daoHelper.query(this.productDao, keyMap, attrList, ProductDao.QUERY_DESSERT_TYPE);
 	}
+
 
 	@Override
 	@Secured({ PermissionsProviderSecured.SECURED })

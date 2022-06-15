@@ -19,6 +19,9 @@ export const SERVICE_CONFIG: Object = {
   },
   'categorymenus':{
     'path':'/categorymenus'
+  },
+  'productAllergics':{
+    'path':'/productAllergics'
   }
 };
 
