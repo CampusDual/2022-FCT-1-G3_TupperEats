@@ -17,4 +17,18 @@ export class MainComponent {
     authService.clearSessionData();
     this.router.navigateByUrl("/homepage");
   }
+
+  navigateToWeekly(){
+    this.router.navigateByUrl("main/weekly");
+  }
+
+  navigateToMonthly(){
+    this.router.navigateByUrl("/main/monthly");
+  }
+  navigateToHistory(){
+    this.router.navigateByUrl("/main/history");
+  }
+  navigateToPersonal(){
+    this.router.navigateByUrl("/main/personal");
+  }
 }

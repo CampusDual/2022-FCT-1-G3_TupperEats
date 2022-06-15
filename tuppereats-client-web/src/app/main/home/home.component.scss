@@ -6,14 +6,14 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .card_item{
-  width: 25%;
+  width: 20%;
   position: relative;
   border-top: 1px solid black;
   border-right: 1px solid black;
-  padding: 30px;
+  padding: 25px;
 }
 .card_item::before {
   background: #fabe80;

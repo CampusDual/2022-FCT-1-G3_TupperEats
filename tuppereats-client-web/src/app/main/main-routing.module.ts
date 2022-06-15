@@ -11,7 +11,11 @@ export const routes: Routes = [
     canActivate: [AuthGuardService],
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) }
+      { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+      { path: 'weekly', loadChildren: () => import('./weekly/weekly.module').then(m => m.WeeklyModule) },
+      { path: 'monthly', loadChildren: () => import('./monthly/monthly.module').then(m => m.MonthlyModule) },
+      { path: 'personal', loadChildren: () => import('./client-personal-data/client-personal-data.module').then(m => m.ClientPersonalDataModule)},
+      { path: 'history', loadChildren: () => import('./client-history/client-history.module').then(m => m.ClientHistoryModule)},
     ]
   }
 ];
