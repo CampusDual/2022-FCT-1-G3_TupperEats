@@ -9,12 +9,12 @@
         <form [formGroup]="loginForm" (ngSubmit)="login()">
 
           <div>
-            <img src="../../assets/images/tuppereats.png" alt="Logo" width="280px" height="280px" style="margin: auto; display: block;">
+            <img src="../../assets/images/LOGO_ARRIBA.png" alt="Logo" width="280px" height="280px" style="margin: auto; display: block;">
           </div>
 
           <div class="login-title-container no-margin-top" fxLayout="column">
             <p class="session-expired text" *ngIf="sessionExpired">{{ 'ERROR_SESSION_EXPIRED' | oTranslate }}</p>
-            <span class="title_text">{{ 'LOGIN_TITLE' | oTranslate }}:</span>
+            <span style="margin-top: 20px;" class="title_text">{{ 'LOGIN_TITLE' | oTranslate }}:</span>
           </div>
 
           <div fxLayout="column" fxLayoutGap="10px">

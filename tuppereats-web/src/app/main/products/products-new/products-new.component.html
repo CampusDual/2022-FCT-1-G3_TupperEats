@@ -4,11 +4,11 @@
   <o-text-input attr="name" required="yes"></o-text-input>
 
   <o-combo attr="product_category_id" service="masterproducts" entity="category" value-column="id_product_category"
-    columns="id_product_category;name_category" visible-columns="name_category" keys="id_product_category">
+    columns="id_product_category;name_category" visible-columns="name_category" keys="id_product_category" required = "yes">
   </o-combo>
 
   <o-combo attr="id_product_type" service="masterproducts" entity="type" value-column="product_type_id"
-    columns="product_type_id;name_type" visible-columns="name_type" keys="product_type_id">
+    columns="product_type_id;name_type" visible-columns="name_type" keys="product_type_id" required = "yes">
   </o-combo>
 
   <o-row>
@@ -19,9 +19,9 @@
   </o-row>
 
   <o-row>
-    <o-combo attr="combo-editable-multiple" multiple="yes" #dessert fxFlex="52" attr="allergic_id"
+    <o-combo attr="combo-editable-multiple" multiple="yes" attr="allergic_id" fxFlex="40"
           service="products" entity="allergicProduct" value-column="allergic_id"
-          columns="allergic_id;allergic_name" visible-columns="allergic_name" keys="allergic_id">
+          columns="allergic_id;allergic_name" visible-columns="allergic_name" keys="allergic_id" required = "yes">
     </o-combo>
   </o-row>
 

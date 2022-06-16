@@ -72,5 +72,9 @@
   "STARTDATE":"Inicio Suscripción",
   "ENDDATE":"Fin Suscripción",
   "menu_category_id":"Categoría",
-  "total_gastado":"Gasto Total del cliente"
+  "total_gastado":"Gasto Total del Cliente",
+  "count_customer":"Nº Total de Clientes",
+  "photo_alergenos":"Alérgenos",
+  "allergic_id":"Alérgenos",
+  "rolename":"Permisos de usuario"
 }

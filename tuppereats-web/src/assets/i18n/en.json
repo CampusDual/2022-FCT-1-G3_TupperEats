@@ -72,5 +72,9 @@
   "STARTDATE":"Start Date",
   "ENDDATE":"End Date",
   "menu_category_id":"Category",
-  "total_gastado":"Total Spent"
+  "total_gastado":"Total Spent",
+  "count_customer":"Total Clients",
+  "photo_alergenos":"Allergens",
+  "allergic_id":"Allergens",
+  "rolename":"Rolename"
 }

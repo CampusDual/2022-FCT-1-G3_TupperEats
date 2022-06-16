@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, Injector, NgZone, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, Injector, NgZone} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { OFormComponent } from 'ontimize-web-ngx';
 

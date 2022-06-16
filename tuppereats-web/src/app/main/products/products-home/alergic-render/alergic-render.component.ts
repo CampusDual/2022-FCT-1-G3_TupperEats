@@ -10,7 +10,7 @@ import { OBaseTableCellRenderer } from 'ontimize-web-ngx';
 export class AlergicRenderComponent extends OBaseTableCellRenderer {
 
   @ViewChild('templateref', { read: TemplateRef, static: false }) public templateref: TemplateRef<any>;
-  public image_array=[];
+  // public image_array=[];
 
 
   constructor(protected injector: Injector, protected sanitizer: DomSanitizer) {
@@ -18,12 +18,17 @@ export class AlergicRenderComponent extends OBaseTableCellRenderer {
     }
 
   getCellData(cellvalue: any, rowvalue?: any): any{
-    if(rowvalue!=undefined){
-     let image_array = rowvalue["photo_alergenos"].split(';;;');
-     this.image_array=image_array.map(image=> this.sanitizer.bypassSecurityTrustResourceUrl('data:image/png;base64,'+image));
-    }
+     return cellvalue;
+  }
 
-     return this.image_array;
+  getImage(rowvalue?: any){
+    let image_array=[];
+
+    if(rowvalue!=undefined){
+      let image_array = rowvalue["photo_alergenos"].split(';;;');
+      return image_array.map(image=> this.sanitizer.bypassSecurityTrustResourceUrl('data:image/png;base64,'+image));
+     }
+     return image_array;
   }
 
 }

@@ -28,7 +28,7 @@ public class PermissionService implements IPermissionService {
 		EntityResult e = new EntityResultMapImpl();
 		Map<String, String> map = new HashMap<>();
 		String role = authentication.getAuthorities().toArray()[0].toString();
-		if (!role.equals("admin")) {
+		if (!role.equals("Administrador")) {
 			map.put("permission", PermissionService.PLANNER_PERMISSION);
 		}
 		e.addRecord(map);
