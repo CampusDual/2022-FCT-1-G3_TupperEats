@@ -43,3 +43,12 @@
   padding-top: 2px;
   text-align: start;
 }
+
+.mat-drawer-opened .o-app-sidenav-image div.o-app-sidenav-image-container  {
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+
+.o-app-sidenav .o-app-sidenav-container .mat-drawer.o-app-sidenav-sidenav.mat-drawer-closed .o-app-sidenav-image .o-app-sidenav-image-container img.o-app-sidenav-image {
+  margin-right: 0px;
+}

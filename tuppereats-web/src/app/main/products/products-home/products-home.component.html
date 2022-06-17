@@ -2,7 +2,7 @@
   <o-form-layout-dialog-options width="850px" height="800px"
   disable-close="false" ></o-form-layout-dialog-options>
   <div fxFill fxLayout="column" fxLayoutAlign="start">
-  <o-table class="o-table-column-centered" attr="productsTable" service="products" entity="product" keys="product_id"
+  <o-table virtual-scroll= "no" class="o-table-column-centered" attr="productsTable" service="products" entity="product" keys="product_id"
     columns="product_id;name;photo;name_category;id_alergenos;photo_alergenos"
     visible-columns="photo;name;name_category;photo_alergenos" query-rows="20" detail-mode= "dblclick">
 
@@ -11,7 +11,7 @@
 
     <o-table-column width="300px" attr="name_category"></o-table-column>
     <o-table-column width="400px" attr="name"></o-table-column>
-    <o-table-column  width="600px"attr="photo_alergenos" keys="product_id" class="o-table-column-centered">
+    <o-table-column  width="400px"attr="photo_alergenos" keys="product_id" class="o-table-column-centered">
       <app-alergic-render keys="product_id"></app-alergic-render>
     </o-table-column>
   </o-table>
