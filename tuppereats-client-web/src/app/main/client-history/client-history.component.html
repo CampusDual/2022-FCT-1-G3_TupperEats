@@ -1,24 +1,35 @@
-
 <div class="history_container">
   <div class="history_table_container">
     <h2 class="text-centered">Historial de Suscripciones</h2>
-  <o-table query-method="clientUser" refresh-button="no" insert-button="no" delete-button="no" class="o-table-column-centered" fxFlex="50" attr="suscription_customer" service="users" entity="userSuscription"
-    keys="user_" columns="user_;suscription_customer_id;suscription_name;suscription_price;suscription_id;start_date_suscription_customer;end_date_suscription_customer"
-    visible-columns="suscription_name;start_date_suscription_customer;end_date_suscription_customer;suscription_price" query-rows="10" detail-mode="none">
-    <o-table-column attr="start_date_suscription_customer" type="date" format="LL" ></o-table-column>
-    <o-table-column attr="end_date_suscription_customer" type="date" format="LL" ></o-table-column>
-    <o-table-column attr="suscription_price" type="currency" currency-symbol="€" currency-symbol-position="right"
-    thousand-separator="." decimal-separator="," ></o-table-column>
-  </o-table>
+    <o-table query-method="clientUser" refresh-button="no" insert-button="no" delete-button="no"
+      class="o-table-column-centered" fxFlex="50" attr="suscription_customer" service="users" entity="userSuscription"
+      keys="user_"
+      columns="user_;suscription_customer_id;suscription_name;suscription_price;suscription_id;start_date_suscription_customer;end_date_suscription_customer"
+      visible-columns="suscription_name;start_date_suscription_customer;end_date_suscription_customer;suscription_price"
+      query-rows="10" detail-mode="none">
+      <o-table-column attr="start_date_suscription_customer" type="date" format="LL"></o-table-column>
+      <o-table-column attr="end_date_suscription_customer" type="date" format="LL"></o-table-column>
+      <o-table-column attr="suscription_price" type="currency" currency-symbol="€" currency-symbol-position="right"
+        thousand-separator="." decimal-separator=","></o-table-column>
+    </o-table>
   </div>
 
   <div class="history_table_container">
     <h2 class="text-centered">Historial de Suscripciones</h2>
-  <o-table query-method="clientUser" refresh-button="no" insert-button="no" delete-button="no" class="o-table-column-centered" fxFlex="50" attr="menu_customer" service="users" entity="userMenu"
-    keys="user_" columns="user_;menu_customer_id;menu_id;menu_name;date_menu_customer"
-    visible-columns="menu_name;date_menu_customer" query-rows="10" detail-mode="none">
-    <o-table-column attr="date_menu_customer" type="date" format="LL" ></o-table-column>
-  </o-table>
+    <o-table query-method="clientUser" refresh-button="no" insert-button="no" delete-button="no"
+      class="o-table-column-centered" fxFlex="50" attr="menu_customer" service="users" entity="userMenu" keys="user_"
+      columns="user_;menu_customer_id;menu_id;menu_name;date_menu_customer"
+      visible-columns="menu_name;date_menu_customer" query-rows="10" detail-mode="none">
+      <o-table-column attr="date_menu_customer" type="date" format="LL"></o-table-column>
+    </o-table>
   </div>
 </div>
+<!-- <o-row>
 
+  <o-form editable-detail="no" show-header="no"
+  attr="suscription_customer" service="users" entity="totalSpent"
+  query-method="clientUser" keys="user_" columns="user_;total_gastado"
+  visible-columns="total_gastado">
+    <o-currency-input class="input-currency" attr="total_gastado" read-only="yes" fxFlex="20"></o-currency-input>
+  </o-form>
+</o-row> -->

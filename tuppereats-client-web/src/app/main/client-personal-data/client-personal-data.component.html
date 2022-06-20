@@ -1,1 +1,11 @@
-<p>client-personal-data works!</p>
+<o-form query-method="clientUser" service="users" entity="user" keys="user_" show-header-navigation="no">
+  <o-text-input attr="user_" sql-type="STRING" enabled="no"></o-text-input>
+  <o-row>
+    <o-text-input  attr="name" required="yes" fxFlex="33"></o-text-input>
+    <o-text-input class="users-margin" attr="surname" required="yes" fxFlex="33"></o-text-input>
+  </o-row>
+  <o-row>
+    <o-password-input  attr="password" required="yes" fxFlex="20"></o-password-input>
+    <o-text-input class="users-margin" attr="email" required="yes" fxFlex="30"></o-text-input>
+  </o-row>
+</o-form>
