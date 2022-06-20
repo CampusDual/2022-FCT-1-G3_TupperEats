@@ -1,0 +1,10 @@
+.history_container{
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+}
+.history_table_container{
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
