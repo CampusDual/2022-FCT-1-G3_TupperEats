@@ -16,6 +16,9 @@ public interface ISuscriptionCustomerService {
 	
 	public EntityResult graficaSuscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException;
+	
+	public EntityResult graficaDetalleSuscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException;
 
     public EntityResult graficaProductQuery(Map<String, Object> keyMap, List<String> attrList)
             throws OntimizeJEERuntimeException;

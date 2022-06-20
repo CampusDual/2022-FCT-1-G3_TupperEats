@@ -77,6 +77,21 @@
 			   ]]>
 			</Sentence>
 		</Query>
+		<Query id="graficaDetalleSucription">
+			<Sentence>
+				<![CDATA[
+				SELECT
+				count(*) as cuenta, mcc.menu_name_category
+				FROM
+				menu_customer mc 
+				join menu m on mc.id_menu = m.menu_id
+				join menu_category mcc on m.menu_category_id = mcc.id_menu_category
+				join suscription_customer sc on sc.suscription_customer_id = mc.id_suscription_customer 
+				#WHERE#
+				group by mcc.menu_name_category
+			   ]]>
+			</Sentence>
+		</Query>
 		<Query id="suscriptionMenuQuery">
 		<AmbiguousColumns>
                 <AmbiguousColumn name="first_plate" prefix="pp"

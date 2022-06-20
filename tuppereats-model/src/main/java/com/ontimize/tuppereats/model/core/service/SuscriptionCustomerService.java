@@ -43,6 +43,8 @@ public class SuscriptionCustomerService implements ISuscriptionCustomerService {
 		return this.daoHelper.query(this.suscriptionCustomerDao, keyMap, attrList,
 				SuscriptionCustomerDao.GRAFICA_SUSCRIPTION);
 	}
+	
+	
     @Override
     public EntityResult graficaProductQuery(Map<String, Object> keyMap, List<String> attrList)
             throws OntimizeJEERuntimeException {
@@ -68,4 +70,11 @@ public class SuscriptionCustomerService implements ISuscriptionCustomerService {
     public EntityResult suscriptionCustomerDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.delete(this.suscriptionCustomerDao, keyMap);
     }
+
+	@Override
+	public EntityResult graficaDetalleSuscriptionQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.suscriptionCustomerDao, keyMap, attrList,
+                SuscriptionCustomerDao.GRAFICA_DETALLE_SUSCRIPTION);
+	}
 }

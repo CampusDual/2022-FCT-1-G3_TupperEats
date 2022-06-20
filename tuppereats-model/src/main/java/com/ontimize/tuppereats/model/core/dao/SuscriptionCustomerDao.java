@@ -21,5 +21,6 @@ public class SuscriptionCustomerDao extends OntimizeJdbcDaoSupport{
 	public static final String SUSCRIPTION_MENU_QUERY = "suscriptionMenuQuery";
 	public static final String GRAFICA_SUSCRIPTION = "graficaSuscription";
     public static final String GRAFICA_PRODUCT = "graficaProduct";
+    public static final String GRAFICA_DETALLE_SUSCRIPTION = "graficaDetalleSucription";
 }
 

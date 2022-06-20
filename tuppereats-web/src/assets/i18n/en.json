@@ -76,5 +76,6 @@
   "count_customer":"Total Clients",
   "photo_alergenos":"Allergens",
   "allergic_id":"Allergens",
-  "rolename":"Rolename"
+  "rolename":"Rolename",
+  "suscription_customer_id":"id. cliente"
 }

@@ -13,10 +13,17 @@
     <o-date-input read-only="yes" class="users-margin" attr="end_date_suscription_customer"></o-date-input>
   </o-row>
 
-  <o-table refresh-button="no" insert-button="no" delete-button="no" class="o-table-column-centered" fxFlex="50" attr="suscription_menu" service="suscriptionCustomers" entity="suscriptionMenu"
+  <o-row>
+     <o-table refresh-button="no" insert-button="no" delete-button="no" class="o-table-column-centered" fxFlex="50" attr="suscription_menu" service="suscriptionCustomers" entity="suscriptionMenu"
       parent-keys="suscription_customer_id" keys="suscription_customer_id"
       columns="user_suscription;suscription_customer_id;menu_id;first_plate;second_plate;dessert;menu_name;first_plate_name;second_plate_name;dessert_name"
       visible-columns="menu_name;first_plate_name;second_plate_name;dessert_name" query-rows="5" detail-mode="none">
-    </o-table>
+  </o-table>
+
+    <o-chart  class="grafica" type="pie" service="suscriptionCustomers" entity="graficaDetalleSuscription" fxFlex="50"
+      parent-keys="suscription_customer_id" keys="suscription_customer_id" x-axis="menu_name_category"
+      y-axis="cuenta" [chart-parameters]="movementTypesChartParams">
+    </o-chart>
+  </o-row>
 
 </o-form>
