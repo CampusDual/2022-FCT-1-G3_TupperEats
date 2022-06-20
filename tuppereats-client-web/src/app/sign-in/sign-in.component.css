@@ -10,6 +10,7 @@ img{
   grid-column-gap: 10px;
   grid-row-gap: 0px;
   padding: 40px;
+  padding-bottom: 0px;
 }
 .form_input_1{
   grid-area: 1 / 1 / 2 / 3;
