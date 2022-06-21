@@ -53,5 +53,26 @@
 			   ]]>
 		</Sentence>
 		</Query>
+		
+		
+		<Query id="menuRender">
+			<Sentence>
+			   <![CDATA[
+			     select
+					mn.*,
+					(select string_agg(allergic, ',') from (select 1 as order_allergic, cast (allergic as varchar) from (select distinct unnest (string_to_array(concat(va.id_alergenos, ',',ve.id_alergenos, ',', vi.id_alergenos), ',')) as allergic) v) v2 group by order_allergic ) as id_alergenos,
+					(select string_agg(allergic, ',') from (select 1 as order_allergic, cast (allergic as varchar) from (select distinct unnest (string_to_array(concat(va.photo_alergenos, ',',ve.photo_alergenos, ',', vi.photo_alergenos), ',')) as allergic) v) v2 group by order_allergic ) as photo_alergenos
+				from
+					menu mn
+					left join product_allergic_view va on
+					mn.first_plate = va.id_product
+					left join product_allergic_view ve on
+					mn.second_plate = ve.id_product
+					left join product_allergic_view vi on
+					mn.dessert = vi.id_product
+				#WHERE#
+			   ]]>
+		</Sentence>
+		</Query>
 	</Queries>
 </JdbcEntitySetup>

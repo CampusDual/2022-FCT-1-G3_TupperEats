@@ -30,6 +30,12 @@ public class MenuService implements IMenuService{
 	}
 
 	@Override
+	public EntityResult menuRenderQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.menuDao, keyMap, attrList, MenuDao.MENU_RENDER);
+	}
+
+	@Override
 	@Secured({ PermissionsProviderSecured.SECURED })
 	public EntityResult menuInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
 		return this.daoHelper.insert(this.menuDao, attrMap);
@@ -45,7 +51,4 @@ public class MenuService implements IMenuService{
 	public EntityResult menuDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
 		return this.daoHelper.delete(this.menuDao, keyMap);
 	}
-	
-	
-
 }

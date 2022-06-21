@@ -13,6 +13,9 @@ public interface IMenuService {
 		public EntityResult menuQuery(Map<String, Object> keyMap, List<String> attrList)
 				throws OntimizeJEERuntimeException;
 
+		public EntityResult menuRenderQuery(Map<String, Object> keyMap, List<String> attrList)
+				throws OntimizeJEERuntimeException;
+
 		public EntityResult menuInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
 
 		public EntityResult menuUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)

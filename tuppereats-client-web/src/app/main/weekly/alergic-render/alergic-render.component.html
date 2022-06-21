@@ -1,0 +1,4 @@
+<ng-template #templateref let-cellvalue="cellvalue" let-rowvalue="rowvalue">
+  {{ getDescriptionValue(cellvalue, rowvalue) }}{{ responseValue(responseMap[cellvalue].menu_name)}}
+  <!-- <img *ngFor="let image of getImage(rowvalue)" [src]= "getScuritySource(image)"/> -->
+</ng-template>

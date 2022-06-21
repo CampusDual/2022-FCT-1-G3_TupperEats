@@ -4,6 +4,12 @@
       columns="menu_id;menu_name;first_plate;second_plate;dessert;first_plate_name;second_plate_name;dessert_name;price;first_plate_photo;second_plate_photo;dessert_photo"
       visible-columns="menu_name;first_plate_name_photo;second_plate_name_photo;dessert_name_photo"
       query-rows="10" detail-mode="dblclick">
+       <o-table-column attr="menu_name" class="o-table-column-centered">
+
+        <o-table-cell-renderer-service service="menus" entity="menuRender" columns="menu_id;menu_name;photo_alergenos"  value-column="menu_name;photo_alergenos" >
+            <app-alergic-render></app-alergic-render>
+        </o-table-cell-renderer-service>
+      </o-table-column>
       <o-table-column attr="first_plate_name_photo" title="first_plate_name" class="o-table-column-centered">
         <app-menu-name-photo-render></app-menu-name-photo-render>
       </o-table-column>
