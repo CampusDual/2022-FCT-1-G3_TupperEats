@@ -31,6 +31,8 @@ export class SuscriptionsDetailComponent implements OnInit {
     this.movementTypesChartParams.legend.vers = 'furious';
     this.movementTypesChartParams.labelType = 'value';
     this.movementTypesChartParams.cornerRadius = 10;
+    this.movementTypesChartParams.valueType = locale.numberFormat('%,.2f');
+
   }
 
 }

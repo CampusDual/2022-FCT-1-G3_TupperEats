@@ -81,7 +81,7 @@
 			<Sentence>
 				<![CDATA[
 				SELECT
-				count(*) as cuenta, mcc.menu_name_category
+				(count(*)::float)/(select count(*) from menu_customer mc3) as cuenta, mcc.menu_name_category
 				FROM
 				menu_customer mc 
 				join menu m on mc.id_menu = m.menu_id
