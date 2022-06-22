@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Injector} from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'ontimize-web-ngx';
 
@@ -10,7 +10,6 @@ import { AuthService } from 'ontimize-web-ngx';
 export class MainComponent {
 
   constructor(public router: Router) { }
-
 
   logout() {
     const _this: any = this;
@@ -30,6 +29,8 @@ export class MainComponent {
     this.router.navigateByUrl("/main/history");
   }
   navigateToPersonal(){
-    this.router.navigateByUrl("/main/personal") ;
+    const _this: any = this;
+    const authService = _this.injector.get(AuthService);
+    this.router.navigateByUrl("/main/personal/" + authService.getSessionInfo().user) ;
   }
 }

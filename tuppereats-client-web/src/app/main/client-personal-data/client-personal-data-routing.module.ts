@@ -5,7 +5,7 @@ import { ClientPersonalDataComponent } from './client-personal-data.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':user_',
     component: ClientPersonalDataComponent
   }
 ];
