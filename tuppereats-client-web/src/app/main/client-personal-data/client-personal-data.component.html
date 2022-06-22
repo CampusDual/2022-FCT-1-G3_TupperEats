@@ -1,11 +1,23 @@
 <o-form query-method="clientUser" service="users" entity="user" keys="user_" show-header-navigation="no">
-  <o-text-input attr="user_" sql-type="STRING" enabled="no"></o-text-input>
-  <o-row>
-    <o-text-input  attr="name" required="yes" fxFlex="33"></o-text-input>
-    <o-text-input class="users-margin" attr="surname" required="yes" fxFlex="33"></o-text-input>
-  </o-row>
-  <o-row>
-    <o-password-input  attr="password" required="yes" fxFlex="20"></o-password-input>
-    <o-text-input class="users-margin" attr="email" required="yes" fxFlex="30"></o-text-input>
-  </o-row>
+  <h2 class="text-centered">Datos personales</h2>
+  <div class="personal_data_container">
+    <o-text-input class="div1" attr="user_" sql-type="STRING" enabled="no"></o-text-input>
+
+    <o-text-input class="div2" attr="name" required="yes" fxFlex="90" appearance='outline'></o-text-input>
+    <o-text-input class="div3" class="users-margin" attr="surname" required="yes" fxFlex="90" appearance='outline'>
+    </o-text-input>
+
+
+    <o-text-input class="div4" class="users-margin" attr="email" required="yes" fxFlex="90" appearance='outline'>
+    </o-text-input>
+    <o-text-input class="div5" attr="phone" required="yes" fxFlex="90" appearance='outline'></o-text-input>
+
+
+    <o-text-input class="div6" attr="address" required="yes" fxFlex="90" appearance='outline'></o-text-input>
+    <o-text-input class="div7" attr="city" required="yes" fxFlex="90" appearance='outline'></o-text-input>
+
+
+    <o-password-input class="div8" attr="password" required="yes" fxFlex="45" appearance='outline'></o-password-input>
+  </div>
+
 </o-form>

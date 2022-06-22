@@ -26,7 +26,7 @@
       </div>
     </o-form-toolbar>
 
-    <form  style="margin-top: 10rem;" #innerForm [formGroup]="formGroup" class="inner-form" (ngSubmit)="signin()" [class.form-no-toolbar]="!showHeader" autocomplete="off" autocorrect="off"
+    <form  style="margin-top: 6rem;" #innerForm [formGroup]="formGroup" class="inner-form" (ngSubmit)="signin()" [class.form-no-toolbar]="!showHeader" autocomplete="off" autocorrect="off"
       autocapitalize="off" spellcheck="false">
       <div *ngIf="loading | async" class="progress-bar-container">
         <mat-progress-bar mode="indeterminate"></mat-progress-bar>
