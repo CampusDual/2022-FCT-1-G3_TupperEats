@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientPersonalDataComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
   }

@@ -11,6 +11,7 @@ export class MainComponent {
 
   constructor(public router: Router) { }
 
+
   logout() {
     const _this: any = this;
     const authService = _this.injector.get(AuthService);
@@ -29,6 +30,6 @@ export class MainComponent {
     this.router.navigateByUrl("/main/history");
   }
   navigateToPersonal(){
-    this.router.navigateByUrl("/main/personal");
+    this.router.navigateByUrl("/main/personal") ;
   }
 }
