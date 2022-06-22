@@ -40,5 +40,10 @@
   "first_plate_name": "First Plate",
   "second_plate_name": "Second Plate",
   "dessert_name": "Dessert",
-  "menu": "Select a menu"
+  "menu": "Select a menu",
+  "suscription_name":"Suscription Name",
+  "start_date_suscription_customer":"Suscription Start",
+  "end_date_suscription_customer":"Suscription End",
+  "suscription_price":"Suscription Price",
+  "date_menu_customer":"Menu Date"
 }

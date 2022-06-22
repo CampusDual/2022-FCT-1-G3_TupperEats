@@ -1,5 +1,5 @@
 import { Injectable, Injector } from "@angular/core";
-import { AuthService, OntimizeEEService, SessionInfo } from "ontimize-web-ngx";
+import { OntimizeEEService, SessionInfo } from "ontimize-web-ngx";
 
 @Injectable()
 export class TupperEatsService extends OntimizeEEService{

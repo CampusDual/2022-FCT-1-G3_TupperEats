@@ -40,5 +40,10 @@
   "first_plate_name": "Primer Plato",
   "second_plate_name": "Segundo Plato",
   "dessert_name": "Postre",
-  "menu": "Elige un menú"
+  "menu": "Elige un menú",
+  "suscription_name":"Suscripción",
+  "start_date_suscription_customer":" Inicio Suscripción",
+  "end_date_suscription_customer":"Fin Suscripción",
+  "suscription_price":"Precio Suscripción",
+  "date_menu_customer":"Fecha de pedido del Menú"
 }
