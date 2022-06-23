@@ -21,7 +21,7 @@
   </div>
 </o-form-layout-manager>
 <h2 class="text-centered margin-on-top-4">↓&nbsp; Configura tu menú mensual&nbsp; ↓</h2>
-<h3 class="margin-top-4">Semana 1</h3>
+<o-column-collapsible class="margin-top-4" title="1ª Semana" appearance="outline">
 <div style="display: flex; flex-direction: row; justify-content: space-evenly; width: 100%;" class="margin-top-2">
   <div>
     <h4>Lunes</h4>
@@ -49,7 +49,8 @@
       visible-columns="menu_name" keys="menu_id" required="yes"></o-combo>
   </div>
 </div>
-<h3>Semana 2</h3>
+</o-column-collapsible>
+<o-column-collapsible class="margin-top-4" title="2ª Semana" appearance="outline" expanded="no">
 <div style="display: flex; flex-direction: row; justify-content: space-evenly; width: 100%;" class="margin-top-2">
   <div>
     <h4>Lunes</h4>
@@ -77,7 +78,8 @@
       visible-columns="menu_name" keys="menu_id" required="yes"></o-combo>
   </div>
 </div>
-<h3>Semana 3</h3>
+</o-column-collapsible>
+<o-column-collapsible class="margin-top-4" title="3ª Semana" appearance="outline" expanded="no">
 <div style="display: flex; flex-direction: row; justify-content: space-evenly; width: 100%;" class="margin-top-2">
   <div>
     <h4>Lunes</h4>
@@ -105,7 +107,8 @@
       visible-columns="menu_name" keys="menu_id" required="yes"></o-combo>
   </div>
 </div>
-<h3>Semana 4</h3>
+</o-column-collapsible>
+<o-column-collapsible class="margin-top-4" title="4ª Semana" appearance="outline" expanded="no">
 <div style="display: flex; flex-direction: row; justify-content: space-evenly; width: 100%;" class="margin-top-2">
   <div>
     <h4>Lunes</h4>
@@ -133,6 +136,7 @@
       visible-columns="menu_name" keys="menu_id" required="yes"></o-combo>
   </div>
 </div>
+</o-column-collapsible>
 <h3 class="text-centered margin-top-4 no-margin-left">Recibiras tu menú a partir del próximo Lunes</h3>
 <div class="text-centered" style="margin-bottom: 6rem;">
   <button mat-raised-button color="primary" style="width: 200px;height: 60px;font-weight: bold;">Realizar pedido</button>
