@@ -1,6 +1,17 @@
 package com.ontimize.tuppereats.model.core.service;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.ontimize.jee.common.dto.EntityResult;
 import com.ontimize.jee.common.dto.EntityResultMapImpl;
 import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
@@ -10,16 +21,6 @@ import com.ontimize.tuppereats.api.core.service.IUserService;
 import com.ontimize.tuppereats.model.core.dao.RoleDao;
 import com.ontimize.tuppereats.model.core.dao.UserDao;
 import com.ontimize.tuppereats.model.core.dao.UserRoleDao;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.security.access.annotation.Secured;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 
 @Lazy
@@ -76,15 +77,15 @@ public class UserService implements IUserService {
         EntityResult userrole = null;
         Map<String, Object> datos = new HashMap<>();
         boolean canInsert = true;
-        List<String> list = new ArrayList();
+		List<String> list = new ArrayList<>();
         list.add(RoleDao.ID_ROLENAME);
         Map<String, String> rolename = new HashMap<>();
         rolename.put("rolename",attrMap.get("id_rolename").toString());
-        EntityResult id_rolename = this.daoHelper.query(this.roleDao, rolename, list);
-        if (id_rolename.getCode() != EntityResult.OPERATION_WRONG) {
+		EntityResult idRolename = this.daoHelper.query(this.roleDao, rolename, list);
+		if (idRolename.getCode() != EntityResult.OPERATION_WRONG) {
 
-            for (int i = 0; i < id_rolename.calculateRecordNumber(); i++) {
-                Map<?, ?> recordValues = id_rolename.getRecordValues(i);
+			for (int i = 0; i < idRolename.calculateRecordNumber(); i++) {
+				Map<?, ?> recordValues = idRolename.getRecordValues(i);
                 datos.put("user_", attrMap.get("user_"));
                 datos.put("id_rolename", recordValues.get("id_rolename"));
                  userrole= this.daoHelper.insert(this.userDao, attrMap);

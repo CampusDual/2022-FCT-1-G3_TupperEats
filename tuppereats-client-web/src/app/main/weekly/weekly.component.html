@@ -1,9 +1,9 @@
 <o-form-layout-manager title="{{'MENU' | oTranslate }}" separator=" " mode="dialog" label-columns="name">
-  <div  fxLayout="column" fxLayoutAlign="start" style="height:70%;">
+  <div  fxLayout="column" fxLayoutAlign="start" style="height:60%;">
     <o-table  insert-button="no" delete-button="no" refresh-button="no" class="o-table-column-centered" attr="menusTable" service="menus" entity="menu" keys="menu_id"
       columns="menu_id;menu_name;first_plate;second_plate;dessert;first_plate_name;second_plate_name;dessert_name;price;first_plate_photo;second_plate_photo;dessert_photo"
       visible-columns="menu_name;first_plate_name_photo;second_plate_name_photo;dessert_name_photo"
-      query-rows="10" detail-mode="dblclick">
+      query-rows="5" detail-mode="dblclick">
        <o-table-column attr="menu_name" class="o-table-column-centered">
          <app-alergic-render service="menus" entity="menuRender" columns="menu_id;menu_name;photo_alergenos" value-column="photo_alergenos"></app-alergic-render>
       </o-table-column>
@@ -19,7 +19,7 @@
     </o-table>
   </div>
 </o-form-layout-manager>
-<h2 class="text-centered margin-on-top-6">↓&nbsp;  Configura tu menú semanal&nbsp;  ↓</h2>
+<h2 class="text-centered margin-on-top-4">↓&nbsp;  Configura tu menú semanal&nbsp;  ↓</h2>
 <div style="display: flex; flex-direction: row; justify-content: space-evenly; width: 100%;" class="margin-top-4">
   <div>
     <h4>Lunes</h4>

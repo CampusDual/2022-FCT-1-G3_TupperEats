@@ -61,7 +61,6 @@ export class AlergicRenderComponent extends OTableCellRendererServiceComponent {
 
     if (rowvalue != undefined) {
       image_array = rowvalue["photo_alergenos"].split(';;;');
-      // return image_array.map(image=> this.sanitizer.bypassSecurityTrustResourceUrl('data:image/png;base64,'+image));
     }
     return image_array;
   }

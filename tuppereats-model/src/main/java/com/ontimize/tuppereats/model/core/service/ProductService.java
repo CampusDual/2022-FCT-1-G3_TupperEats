@@ -61,14 +61,14 @@ public class ProductService implements IProductService {
 	@Override
 	@Secured({ PermissionsProviderSecured.SECURED })
 	 public EntityResult productInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
-	     ArrayList<Object> allergic_id = new ArrayList<>();
+			ArrayList<Object> allergicId = new ArrayList<>();
 	     EntityResult insertProduct = this.daoHelper.insert(this.productDao, attrMap);
 	     Map<String, Object> datos = new HashMap<>();
 	     for (String clave : attrMap.keySet()) {
 	         if (clave.equalsIgnoreCase("allergic_id"))
-	             allergic_id = (ArrayList<Object>) attrMap.get(clave);
+					allergicId = (ArrayList<Object>) attrMap.get(clave);
 	     }
-	     for (Object id_allergic : allergic_id) {
+			for (Object id_allergic : allergicId) {
 	         datos.put("id_allergic", id_allergic);
 	         datos.put("id_product", insertProduct.get("product_id"));
 	         this.daoHelper.insert(this.productAllergicDao,datos);
